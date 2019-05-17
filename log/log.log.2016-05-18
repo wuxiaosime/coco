@@ -1,0 +1,1152 @@
+2016-05-18 12:12:13 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 12:12:14 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 12:12:14 CST 2016]; root of context hierarchy
+2016-05-18 12:12:14 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 12:12:17 [ main ] Root WebApplicationContext: initialization completed in 3431 ms
+2016-05-18 12:12:18 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 12:12:18 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 12:12:18 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 12:12:18 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 12:12:20 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 12:12:20 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 12:12:20 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 12:12:20 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 12:12:20 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 12:12:20 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 12:12:20 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 12:12:21 [ main ] FrameworkServlet 'springmvc': initialization completed in 2571 ms
+2016-05-18 12:49:25 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 12:49:25 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 12:49:25 CST 2016]; root of context hierarchy
+2016-05-18 12:49:25 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 12:49:26 [ main ] Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 106 in XML document from class path resource [applicationContext.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 106; columnNumber: 80; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 106; columnNumber: 80; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.error(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.reportSchemaError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.handleStartElement(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.emptyElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 23 more
+2016-05-18 12:55:50 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 12:55:50 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 12:55:50 CST 2016]; root of context hierarchy
+2016-05-18 12:55:50 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 12:55:51 [ main ] Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 106 in XML document from class path resource [applicationContext.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 106; columnNumber: 80; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 106; columnNumber: 80; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.error(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.reportSchemaError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.handleStartElement(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.emptyElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 23 more
+2016-05-18 13:01:47 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:01:47 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:01:47 CST 2016]; root of context hierarchy
+2016-05-18 13:01:47 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:01:49 [ main ] Root WebApplicationContext: initialization completed in 1575 ms
+2016-05-18 13:01:49 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:01:49 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:01:49 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:01:49 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:01:50 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:01:50 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:01:50 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:01:50 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:01:50 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:01:50 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:01:50 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:01:51 [ main ] FrameworkServlet 'springmvc': initialization completed in 1804 ms
+2016-05-18 13:04:59 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:04:59 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:04:59 CST 2016]; root of context hierarchy
+2016-05-18 13:04:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:05:00 [ main ] Root WebApplicationContext: initialization completed in 1141 ms
+2016-05-18 13:05:00 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:05:00 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:05:00 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:05:00 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:05:01 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:05:01 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:05:01 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:05:01 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:05:01 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:05:01 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:05:01 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:05:02 [ main ] FrameworkServlet 'springmvc': initialization completed in 1501 ms
+2016-05-18 13:06:39 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:06:39 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:06:39 CST 2016]; root of context hierarchy
+2016-05-18 13:06:39 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:06:40 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 13:06:40 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 13:06:40 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 13:06:41 [ main ] Root WebApplicationContext: initialization completed in 2180 ms
+2016-05-18 13:06:41 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:06:41 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:06:41 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:06:41 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:06:42 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:06:42 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:06:42 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:06:42 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:06:42 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:06:42 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:06:42 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:06:43 [ main ] FrameworkServlet 'springmvc': initialization completed in 1299 ms
+2016-05-18 13:09:36 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:09:36 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:09:36 CST 2016]; root of context hierarchy
+2016-05-18 13:09:36 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:09:37 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 13:09:37 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 13:09:37 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 13:09:38 [ main ] Root WebApplicationContext: initialization completed in 1748 ms
+2016-05-18 13:09:38 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:09:38 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:09:38 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:09:38 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:09:39 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:09:39 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:09:39 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:09:39 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:09:39 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:09:39 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:09:39 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:09:40 [ main ] FrameworkServlet 'springmvc': initialization completed in 1507 ms
+2016-05-18 13:10:22 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:10:22 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:10:22 CST 2016]; root of context hierarchy
+2016-05-18 13:10:22 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:10:22 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 13:10:22 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 13:10:23 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 13:10:23 [ main ] Root WebApplicationContext: initialization completed in 1819 ms
+2016-05-18 13:10:24 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:10:24 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:10:24 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:10:24 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:10:24 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:10:24 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:10:24 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:10:24 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:10:24 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:10:24 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:10:24 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:10:25 [ main ] FrameworkServlet 'springmvc': initialization completed in 1470 ms
+2016-05-18 13:10:53 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:10:53 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:10:53 CST 2016]; root of context hierarchy
+2016-05-18 13:10:53 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:10:54 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 13:10:54 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 13:10:54 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 13:10:54 [ main ] Root WebApplicationContext: initialization completed in 1764 ms
+2016-05-18 13:10:55 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:10:55 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:10:55 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:10:55 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:10:55 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:10:55 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:10:55 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:10:55 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:10:55 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:10:55 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:10:55 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:10:56 [ main ] FrameworkServlet 'springmvc': initialization completed in 1286 ms
+2016-05-18 13:12:45 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:12:45 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:12:45 CST 2016]; root of context hierarchy
+2016-05-18 13:12:45 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:12:46 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 13:12:46 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 13:12:46 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 13:12:47 [ main ] Root WebApplicationContext: initialization completed in 1778 ms
+2016-05-18 13:12:47 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:12:47 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:12:47 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:12:47 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:12:48 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:12:48 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:12:48 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:12:48 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:12:48 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:12:48 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:12:48 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:12:49 [ main ] FrameworkServlet 'springmvc': initialization completed in 1601 ms
+2016-05-18 13:13:54 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:13:54 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:13:54 CST 2016]; root of context hierarchy
+2016-05-18 13:13:54 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:13:55 [ main ] Root WebApplicationContext: initialization completed in 1307 ms
+2016-05-18 13:13:55 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:13:55 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:13:55 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:13:55 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:13:56 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:13:56 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:13:56 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:13:56 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:13:56 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:13:56 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:13:56 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:13:57 [ main ] FrameworkServlet 'springmvc': initialization completed in 1391 ms
+2016-05-18 13:14:06 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:14:06 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:14:06 CST 2016]; root of context hierarchy
+2016-05-18 13:14:06 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:14:06 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 13:14:06 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 13:14:06 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 13:14:07 [ main ] Root WebApplicationContext: initialization completed in 1860 ms
+2016-05-18 13:14:08 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:14:08 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:14:08 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:14:08 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:14:09 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:14:09 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:14:09 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:14:09 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:14:09 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:14:09 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:14:09 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:14:09 [ main ] FrameworkServlet 'springmvc': initialization completed in 1651 ms
+2016-05-18 13:14:33 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:14:33 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:14:33 CST 2016]; root of context hierarchy
+2016-05-18 13:14:33 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:14:34 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 13:14:34 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 13:14:34 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 13:14:34 [ main ] Root WebApplicationContext: initialization completed in 1660 ms
+2016-05-18 13:14:35 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:14:35 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:14:35 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:14:35 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:14:35 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:14:35 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:14:35 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:14:35 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:14:35 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:14:35 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:14:35 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:14:36 [ main ] FrameworkServlet 'springmvc': initialization completed in 1363 ms
+2016-05-18 13:19:41 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:19:41 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:19:41 CST 2016]; root of context hierarchy
+2016-05-18 13:19:41 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:19:41 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 13:19:41 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 13:19:41 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 13:19:42 [ main ] Root WebApplicationContext: initialization completed in 1656 ms
+2016-05-18 13:19:42 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:19:42 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:19:42 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:19:42 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:19:43 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:19:43 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:19:43 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:19:43 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:19:43 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:19:43 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:19:43 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:19:44 [ main ] FrameworkServlet 'springmvc': initialization completed in 1302 ms
+2016-05-18 13:22:46 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:22:46 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:22:46 CST 2016]; root of context hierarchy
+2016-05-18 13:22:46 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:23:12 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:23:12 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:23:12 CST 2016]; root of context hierarchy
+2016-05-18 13:23:12 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:23:13 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 13:23:13 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 13:23:13 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 13:23:14 [ main ] Root WebApplicationContext: initialization completed in 1851 ms
+2016-05-18 13:23:14 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:23:14 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:23:14 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:23:14 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:23:15 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:23:15 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:23:15 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:23:15 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:23:15 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:23:15 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:23:15 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:23:16 [ main ] FrameworkServlet 'springmvc': initialization completed in 1373 ms
+2016-05-18 13:26:46 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:26:46 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:26:46 CST 2016]; root of context hierarchy
+2016-05-18 13:26:46 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:26:47 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 13:26:47 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 13:26:47 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 13:26:48 [ main ] Root WebApplicationContext: initialization completed in 1804 ms
+2016-05-18 13:26:48 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:26:48 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:26:48 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:26:48 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:26:49 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:26:49 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:26:49 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:26:49 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:26:49 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:26:49 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:26:49 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:26:50 [ main ] FrameworkServlet 'springmvc': initialization completed in 1560 ms
+2016-05-18 13:27:44 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 13:27:44 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 13:27:44 CST 2016]; root of context hierarchy
+2016-05-18 13:27:44 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 13:27:45 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 13:27:45 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 13:27:45 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 13:27:46 [ main ] Root WebApplicationContext: initialization completed in 1830 ms
+2016-05-18 13:27:46 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 13:27:46 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 13:27:46 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 13:27:46 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 13:27:47 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:27:47 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:27:47 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 13:27:47 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 13:27:47 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 13:27:47 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 13:27:47 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 13:27:47 [ main ] FrameworkServlet 'springmvc': initialization completed in 1305 ms
+2016-05-18 14:22:44 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 14:22:47 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 14:22:47 CST 2016]; root of context hierarchy
+2016-05-18 14:22:47 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 14:22:49 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 14:22:49 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 14:22:49 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 14:22:52 [ main ] Root WebApplicationContext: initialization completed in 6516 ms
+2016-05-18 14:22:52 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 14:22:52 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 14:22:52 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 14:22:52 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 14:22:53 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 14:22:53 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 14:22:53 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 14:22:53 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 14:22:53 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 14:22:53 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 14:22:53 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 14:22:54 [ main ] FrameworkServlet 'springmvc': initialization completed in 1968 ms
+2016-05-18 14:41:03 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 14:41:03 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 14:41:03 CST 2016]; root of context hierarchy
+2016-05-18 14:41:03 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 14:41:03 [ main ] Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 109 in XML document from class path resource [applicationContext.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 109; columnNumber: 112; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 109; columnNumber: 112; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.error(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.reportSchemaError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.handleStartElement(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 23 more
+2016-05-18 14:43:59 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 14:43:59 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 14:43:59 CST 2016]; root of context hierarchy
+2016-05-18 14:43:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 14:43:59 [ main ] Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 108 in XML document from class path resource [applicationContext.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 108; columnNumber: 112; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 108; columnNumber: 112; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.error(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.reportSchemaError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.handleStartElement(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 23 more
+2016-05-18 14:44:03 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 14:44:03 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 14:44:03 CST 2016]; root of context hierarchy
+2016-05-18 14:44:03 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 14:44:03 [ main ] Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 108 in XML document from class path resource [applicationContext.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 108; columnNumber: 112; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 108; columnNumber: 112; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.error(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.reportSchemaError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.handleStartElement(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 23 more
+2016-05-18 14:46:42 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 14:46:43 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 14:46:43 CST 2016]; root of context hierarchy
+2016-05-18 14:46:43 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 14:46:43 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 14:46:43 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 14:46:43 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 14:46:44 [ main ] Root WebApplicationContext: initialization completed in 1694 ms
+2016-05-18 14:46:44 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 14:46:44 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 14:46:44 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 14:46:44 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 14:46:45 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 14:46:45 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 14:46:45 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 14:46:45 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 14:46:45 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 14:46:45 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 14:46:45 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 14:46:46 [ main ] FrameworkServlet 'springmvc': initialization completed in 1484 ms
+2016-05-18 14:55:59 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 14:56:00 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 14:56:00 CST 2016]; root of context hierarchy
+2016-05-18 14:56:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 14:56:00 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 14:56:00 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 14:56:00 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 14:56:01 [ main ] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'voteController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire method: public void group.salad.service.VoteController.setLocationHelper(group.salad.util.LocationHelper); nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.cxf.spring.remoting.Jsr181HandlerMapping] for bean with name 'webServicesAgent' defined in class path resource [applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.cxf.spring.remoting.Jsr181HandlerMapping] for bean with name 'webServicesAgent' defined in class path resource [applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.cxf.spring.remoting.Jsr181HandlerMapping] for bean with name 'webServicesAgent' defined in class path resource [applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.cxf.spring.remoting.Jsr181HandlerMapping] for bean with name 'webServicesAgent' defined in class path resource [applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+Related cause: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.cxf.spring.remoting.Jsr181HandlerMapping] for bean with name 'webServicesAgent' defined in class path resource [applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire method: public void group.salad.service.VoteController.setLocationHelper(group.salad.util.LocationHelper); nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.cxf.spring.remoting.Jsr181HandlerMapping] for bean with name 'webServicesAgent' defined in class path resource [applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 23 more
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.cxf.spring.remoting.Jsr181HandlerMapping] for bean with name 'webServicesAgent' defined in class path resource [applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:385)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:362)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1002)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:553)
+	... 25 more
+Caused by: java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:415)
+	at runjettyrun.ProjectClassLoader.loadClass(ProjectClassLoader.java:88)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:236)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1319)
+	... 34 more
+Related cause:
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.cxf.spring.remoting.Jsr181HandlerMapping] for bean with name 'webServicesAgent' defined in class path resource [applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:385)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:354)
+	at org.springframework.context.support.AbstractApplicationContext.getBeanNamesForType(AbstractApplicationContext.java:1057)
+	at org.apache.cxf.bus.spring.SpringBeanLocator.getBeansOfType(SpringBeanLocator.java:155)
+	at org.apache.cxf.bus.CXFBusImpl.initialize(CXFBusImpl.java:203)
+	at org.apache.cxf.bus.spring.SpringBus.setApplicationContext(SpringBus.java:89)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:119)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:646)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getSingletonFactoryBeanForTypeCheck(AbstractAutowireCapableBeanFactory.java:845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:776)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:387)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:362)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1002)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:553)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:415)
+	at runjettyrun.ProjectClassLoader.loadClass(ProjectClassLoader.java:88)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:236)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1319)
+	... 59 more
+Related cause:
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.cxf.spring.remoting.Jsr181HandlerMapping] for bean with name 'webServicesAgent' defined in class path resource [applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:385)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:354)
+	at org.springframework.context.support.AbstractApplicationContext.getBeanNamesForType(AbstractApplicationContext.java:1057)
+	at org.apache.cxf.bus.spring.SpringBeanLocator.getBeansOfType(SpringBeanLocator.java:155)
+	at org.apache.cxf.service.factory.FactoryBeanListenerManager.setBus(FactoryBeanListenerManager.java:57)
+	at org.apache.cxf.service.factory.FactoryBeanListenerManager.<init>(FactoryBeanListenerManager.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.apache.cxf.bus.extension.Extension.load(Extension.java:217)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.loadAndRegister(ExtensionManagerImpl.java:217)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.getBeanOfType(ExtensionManagerImpl.java:324)
+	at org.apache.cxf.bus.spring.SpringBeanLocator.getBeanOfType(SpringBeanLocator.java:138)
+	at org.apache.cxf.bus.CXFBusImpl.getExtension(CXFBusImpl.java:107)
+	at org.apache.cxf.ws.policy.PolicyEngineImpl.setBus(PolicyEngineImpl.java:108)
+	at org.apache.cxf.ws.policy.PolicyEngineImpl.<init>(PolicyEngineImpl.java:91)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.apache.cxf.bus.extension.Extension.load(Extension.java:217)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.loadAndRegister(ExtensionManagerImpl.java:217)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.initialize(ExtensionManagerImpl.java:121)
+	at org.apache.cxf.bus.extension.ExtensionManagerBus.doInitializeInternal(ExtensionManagerBus.java:143)
+	at org.apache.cxf.bus.CXFBusImpl.initialize(CXFBusImpl.java:209)
+	at org.apache.cxf.bus.spring.SpringBus.setApplicationContext(SpringBus.java:89)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:119)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:646)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getSingletonFactoryBeanForTypeCheck(AbstractAutowireCapableBeanFactory.java:845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:776)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:387)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:362)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1002)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:553)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:415)
+	at runjettyrun.ProjectClassLoader.loadClass(ProjectClassLoader.java:88)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:236)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1319)
+	... 80 more
+Related cause:
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.cxf.spring.remoting.Jsr181HandlerMapping] for bean with name 'webServicesAgent' defined in class path resource [applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:385)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:354)
+	at org.springframework.context.support.AbstractApplicationContext.getBeanNamesForType(AbstractApplicationContext.java:1057)
+	at org.apache.cxf.bus.spring.SpringBeanLocator.getBeansOfType(SpringBeanLocator.java:155)
+	at org.apache.cxf.bus.managers.CXFBusLifeCycleManager.initComplete(CXFBusLifeCycleManager.java:80)
+	at org.apache.cxf.bus.CXFBusImpl.initialize(CXFBusImpl.java:213)
+	at org.apache.cxf.bus.spring.SpringBus.setApplicationContext(SpringBus.java:89)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:119)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:646)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getSingletonFactoryBeanForTypeCheck(AbstractAutowireCapableBeanFactory.java:845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:776)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:387)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:362)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1002)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:553)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:415)
+	at runjettyrun.ProjectClassLoader.loadClass(ProjectClassLoader.java:88)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:236)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1319)
+	... 60 more
+Related cause:
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.cxf.spring.remoting.Jsr181HandlerMapping] for bean with name 'webServicesAgent' defined in class path resource [applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:385)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:354)
+	at org.springframework.context.support.AbstractApplicationContext.getBeanNamesForType(AbstractApplicationContext.java:1057)
+	at org.apache.cxf.bus.spring.SpringBeanLocator.getBeansOfType(SpringBeanLocator.java:155)
+	at org.apache.cxf.bus.CXFBusImpl.getExtension(CXFBusImpl.java:112)
+	at org.apache.cxf.management.jmx.InstrumentationManagerImpl.init(InstrumentationManagerImpl.java:143)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.cxf.common.injection.ResourceInjector.invokePostConstruct(ResourceInjector.java:346)
+	at org.apache.cxf.common.injection.ResourceInjector.construct(ResourceInjector.java:125)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.loadAndRegister(ExtensionManagerImpl.java:247)
+	at org.apache.cxf.bus.extension.ExtensionManagerImpl.getBeansOfType(ExtensionManagerImpl.java:350)
+	at org.apache.cxf.bus.spring.SpringBeanLocator.getBeansOfType(SpringBeanLocator.java:163)
+	at org.apache.cxf.bus.managers.CXFBusLifeCycleManager.initComplete(CXFBusLifeCycleManager.java:80)
+	at org.apache.cxf.bus.CXFBusImpl.initialize(CXFBusImpl.java:213)
+	at org.apache.cxf.bus.spring.SpringBus.setApplicationContext(SpringBus.java:89)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:119)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:407)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:646)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getSingletonFactoryBeanForTypeCheck(AbstractAutowireCapableBeanFactory.java:845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:776)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:387)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:362)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1002)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:553)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: java.lang.ClassNotFoundException: org.apache.cxf.spring.remoting.Jsr181HandlerMapping
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:415)
+	at runjettyrun.ProjectClassLoader.loadClass(ProjectClassLoader.java:88)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:236)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1319)
+	... 71 more
+2016-05-18 14:57:16 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 14:57:16 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 14:57:16 CST 2016]; root of context hierarchy
+2016-05-18 14:57:16 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 14:57:17 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 14:57:17 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 14:57:17 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 14:57:18 [ main ] Root WebApplicationContext: initialization completed in 1679 ms
+2016-05-18 14:57:18 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 14:57:18 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 14:57:18 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 14:57:18 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 14:57:18 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 14:57:18 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 14:57:18 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 14:57:18 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 14:57:18 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 14:57:18 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 14:57:18 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 14:57:19 [ main ] FrameworkServlet 'springmvc': initialization completed in 1472 ms
+2016-05-18 15:08:04 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 15:08:04 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 15:08:04 CST 2016]; root of context hierarchy
+2016-05-18 15:08:04 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 15:08:05 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 15:08:05 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 15:08:05 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 15:08:06 [ main ] Root WebApplicationContext: initialization completed in 2267 ms
+2016-05-18 15:08:06 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 15:08:06 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 15:08:06 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 15:08:06 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 15:08:07 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:08:07 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:08:07 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:08:07 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 15:08:07 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 15:08:07 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 15:08:07 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 15:08:08 [ main ] FrameworkServlet 'springmvc': initialization completed in 1439 ms
+2016-05-18 15:25:54 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 15:25:54 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 15:25:54 CST 2016]; root of context hierarchy
+2016-05-18 15:25:54 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 15:25:54 [ main ] Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 112 in XML document from class path resource [applicationContext.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 112; columnNumber: 110; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 112; columnNumber: 110; cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'jaxws:endpoint'.
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.error(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.reportSchemaError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.handleStartElement(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 23 more
+2016-05-18 15:32:32 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 15:32:32 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 15:32:32 CST 2016]; root of context hierarchy
+2016-05-18 15:32:32 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 15:32:33 [ main ] Root WebApplicationContext: initialization completed in 1085 ms
+2016-05-18 15:32:33 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 15:32:33 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 15:32:33 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 15:32:33 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 15:32:33 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:32:33 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:32:33 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:32:33 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 15:32:33 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 15:32:33 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 15:32:33 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 15:32:34 [ main ] FrameworkServlet 'springmvc': initialization completed in 1301 ms
+2016-05-18 15:39:02 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 15:39:02 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 15:39:02 CST 2016]; root of context hierarchy
+2016-05-18 15:39:02 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-05-18 15:39:03 [ main ] Root WebApplicationContext: initialization completed in 813 ms
+2016-05-18 15:39:03 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 15:39:03 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 15:39:03 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 15:39:03 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 15:39:04 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:39:04 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:39:04 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:39:04 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 15:39:04 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 15:39:04 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 15:39:04 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 15:39:05 [ main ] FrameworkServlet 'springmvc': initialization completed in 1377 ms
+2016-05-18 15:41:06 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 15:41:06 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 15:41:06 CST 2016]; root of context hierarchy
+2016-05-18 15:41:06 [ main ] Loading XML bean definitions from file [D:\workspace\salad\build\classes\applicationContext-cxf.xml]
+2016-05-18 15:41:06 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 15:41:06 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 15:41:06 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 15:41:06 [ main ] Loading XML bean definitions from file [D:\workspace\salad\build\classes\applicationContext.xml]
+2016-05-18 15:41:07 [ main ] Context initialization failed
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [cn.com.td.smsIssued.service.impl.SmsIssuedService] for bean with name 'smsIssuedService' defined in file [D:\workspace\salad\build\classes\applicationContext-cxf.xml]; nested exception is java.lang.ClassNotFoundException: cn.com.td.smsIssued.service.impl.SmsIssuedService
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:683)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Caused by: java.lang.ClassNotFoundException: cn.com.td.smsIssued.service.impl.SmsIssuedService
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.mortbay.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:392)
+	at runjettyrun.ProjectClassLoader.loadClass(ProjectClassLoader.java:89)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:236)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1319)
+	... 19 more
+2016-05-18 15:42:20 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 15:42:20 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 15:42:20 CST 2016]; root of context hierarchy
+2016-05-18 15:42:20 [ main ] Loading XML bean definitions from file [D:\workspace\salad\build\classes\applicationContext-cxf.xml]
+2016-05-18 15:42:21 [ main ] Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 18 in XML document from file [D:\workspace\salad\build\classes\applicationContext-cxf.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 18; columnNumber: 36; cvc-id.2: There are multiple occurrences of ID value 'ESBServerPortType'.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:398)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:335)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:303)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:454)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 18; columnNumber: 36; cvc-id.2: There are multiple occurrences of ID value 'ESBServerPortType'.
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.error(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.reportSchemaError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.processOneAttribute(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.processAttributes(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.handleStartElement(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:428)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	... 23 more
+2016-05-18 15:43:35 [ main ] Root WebApplicationContext: initialization started
+2016-05-18 15:43:35 [ main ] Refreshing Root WebApplicationContext: startup date [Wed May 18 15:43:35 CST 2016]; root of context hierarchy
+2016-05-18 15:43:35 [ main ] Loading XML bean definitions from file [D:\workspace\salad\build\classes\applicationContext-cxf.xml]
+2016-05-18 15:43:35 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2016-05-18 15:43:35 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2016-05-18 15:43:35 [ main ] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2016-05-18 15:43:35 [ main ] Loading XML bean definitions from file [D:\workspace\salad\build\classes\applicationContext.xml]
+2016-05-18 15:43:54 [ main ] Root WebApplicationContext: initialization completed in 19352 ms
+2016-05-18 15:43:54 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-05-18 15:43:54 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed May 18 15:43:54 CST 2016]; parent: Root WebApplicationContext
+2016-05-18 15:43:54 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-05-18 15:43:55 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:43:55 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:43:55 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-18 15:43:55 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-05-18 15:43:55 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-05-18 15:43:55 [ main ] Mapped "{[/vote/get],methods=[POST],params=[],headers=[],consumes=[],produces=[text/plain;charset=UTF-8],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2016-05-18 15:43:55 [ main ] Mapped "{[/vote/stat],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public synchronized java.lang.String group.salad.service.VoteController.stat()
+2016-05-18 15:43:55 [ main ] FrameworkServlet 'springmvc': initialization completed in 1200 ms

@@ -1,0 +1,1910 @@
+2019-04-20 01:09:09 [ main ] Root WebApplicationContext: initialization started
+2019-04-20 01:09:09 [ main ] Refreshing Root WebApplicationContext: startup date [Sat Apr 20 01:09:09 CST 2019]; root of context hierarchy
+2019-04-20 01:09:09 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-04-20 01:09:10 [ main ] Loading properties file from class path resource [wx-config.properties]
+2019-04-20 01:09:10 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-04-20 01:09:10 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-04-20 01:09:10 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-04-20 01:09:10 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\wx-config.properties]
+2019-04-20 01:09:11 [ main ] MLog clients using log4j logging.
+2019-04-20 01:09:11 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-04-20 01:09:11 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-04-20 01:09:11 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-04-20 01:09:11 [ main ] HHH000206: hibernate.properties not found
+2019-04-20 01:09:11 [ main ] HHH000021: Bytecode provider name : javassist
+2019-04-20 01:09:11 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2f549ojg0ovgg|748fe51d, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2f549ojg0ovgg|748fe51d, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-04-20 01:09:11 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-04-20 01:09:11 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-04-20 01:09:12 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+2019-04-20 01:09:12 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+2019-04-20 01:09:12 [ main ] Unrecognized value for "hibernate.hbm2ddl.auto": none
+2019-04-20 01:09:12 [ main ] HHH020007: read-only cache configured for mutable entity [indi.shaw.coco.model.Code]
+2019-04-20 01:09:13 [ main ] Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2f549ojg0ovgg|748fe51d, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2f549ojg0ovgg|748fe51d, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+2019-04-20 01:09:13 [ main ] Root WebApplicationContext: initialization completed in 3324 ms
+2019-04-20 01:09:13 [ main ] FrameworkServlet 'springmvc': initialization started
+2019-04-20 01:09:13 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Sat Apr 20 01:09:13 CST 2019]; parent: Root WebApplicationContext
+2019-04-20 01:09:13 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2019-04-20 01:09:13 [ main ] Overriding bean definition for bean 'mvcContentNegotiationManager': replacing [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-20 01:09:13 [ main ] Overriding bean definition for bean 'mvcUriComponentsContributor': replacing [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-20 01:09:13 [ main ] Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2019-04-20 01:09:13 [ main ] Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2019-04-20 01:09:13 [ main ] Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+2019-04-20 01:09:13 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-20 01:09:13 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/wx/onLogin],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.onLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/wx/getUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/wx/receiveUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.receiveUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-20 01:09:13 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/wx/onLogin],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.onLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/wx/getUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] Mapped "{[/wx/receiveUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.receiveUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 01:09:13 [ main ] FrameworkServlet 'springmvc': initialization completed in 532 ms
+2019-04-20 01:10:01 [ qtp1836643189-21 ] Session Metrics {
+    200413 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    28917445 nanoseconds spent preparing 34 JDBC statements;
+    52952281 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    23936872 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    42967 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:11:20 [ qtp1836643189-19 ] Session Metrics {
+    230460 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2367696 nanoseconds spent preparing 34 JDBC statements;
+    20210453 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    2418776 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7512 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:12:33 [ qtp1836643189-28 ] Session Metrics {
+    277033 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    3124876 nanoseconds spent preparing 34 JDBC statements;
+    26169661 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1719585 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6009 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:12:54 [ qtp1836643189-28 ] Session Metrics {
+    31249 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1615022 nanoseconds spent preparing 34 JDBC statements;
+    18095752 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1862909 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:15:11 [ qtp1836643189-60 ] Session Metrics {
+    249990 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2745088 nanoseconds spent preparing 34 JDBC statements;
+    17740895 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1023999 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    9314 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:15:22 [ qtp1836643189-59 ] Session Metrics {
+    21334 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1493630 nanoseconds spent preparing 34 JDBC statements;
+    18964710 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1263773 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    12920 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:16:59 [ qtp1836643189-67 ] Session Metrics {
+    227154 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2423584 nanoseconds spent preparing 34 JDBC statements;
+    16280620 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    845821 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    10216 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:19:57 [ qtp1836643189-73 ] Session Metrics {
+    274629 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2890814 nanoseconds spent preparing 34 JDBC statements;
+    21986829 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1148393 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5408 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:24:30 [ qtp1836643189-82 ] Session Metrics {
+    196808 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2139343 nanoseconds spent preparing 34 JDBC statements;
+    15034571 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1080187 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6910 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:27:05 [ qtp1836643189-89 ] Session Metrics {
+    285145 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2655850 nanoseconds spent preparing 34 JDBC statements;
+    15181499 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1184750 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:33:08 [ qtp1836643189-98 ] Session Metrics {
+    242178 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2626403 nanoseconds spent preparing 34 JDBC statements;
+    19251353 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1044731 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    9916 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:34:05 [ qtp1836643189-98 ] Session Metrics {
+    219944 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2602064 nanoseconds spent preparing 34 JDBC statements;
+    21675840 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1387266 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:35:04 [ qtp1836643189-98 ] Session Metrics {
+    475643 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1986703 nanoseconds spent preparing 34 JDBC statements;
+    14475998 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    798948 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:36:06 [ qtp1836643189-18 ] Session Metrics {
+    262610 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2021858 nanoseconds spent preparing 34 JDBC statements;
+    15732862 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    740957 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6911 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:38:40 [ qtp1836643189-106 ] Session Metrics {
+    278234 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2024861 nanoseconds spent preparing 34 JDBC statements;
+    15415567 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    874666 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7812 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:43:18 [ qtp1836643189-114 ] Session Metrics {
+    173070 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2273344 nanoseconds spent preparing 34 JDBC statements;
+    14391871 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1266777 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:43:32 [ qtp1836643189-116 ] Session Metrics {
+    258103 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1758046 nanoseconds spent preparing 34 JDBC statements;
+    13977823 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    865351 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    4207 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 01:43:35 [ qtp1836643189-114 ] Session Metrics {
+    32451 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1421821 nanoseconds spent preparing 34 JDBC statements;
+    18343341 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    733745 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6309 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:09:56 [ qtp1836643189-143 ] Session Metrics {
+    203718 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2131829 nanoseconds spent preparing 34 JDBC statements;
+    14920395 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    795341 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6911 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:13:28 [ qtp1836643189-151 ] Session Metrics {
+    217540 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2281463 nanoseconds spent preparing 34 JDBC statements;
+    14479311 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1089501 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    8113 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:13:35 [ qtp1836643189-151 ] Session Metrics {
+    23737 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1722890 nanoseconds spent preparing 34 JDBC statements;
+    18829801 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1311848 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5408 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:14:02 [ qtp1836643189-154 ] Session Metrics {
+    212432 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1987903 nanoseconds spent preparing 34 JDBC statements;
+    13376284 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    597032 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5409 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:15:10 [ qtp1836643189-99 ] Session Metrics {
+    301971 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    3384785 nanoseconds spent preparing 34 JDBC statements;
+    18474346 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    781520 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7211 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:18:53 [ qtp1836643189-163 ] Session Metrics {
+    381296 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1834363 nanoseconds spent preparing 34 JDBC statements;
+    14172827 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    703098 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7211 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:29:45 [ qtp1836643189-175 ] Session Metrics {
+    242478 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2225274 nanoseconds spent preparing 34 JDBC statements;
+    18012222 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    899905 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6610 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:30:36 [ qtp1836643189-175 ] Session Metrics {
+    313089 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1647469 nanoseconds spent preparing 34 JDBC statements;
+    13051476 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    412244 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6610 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:32:04 [ qtp1836643189-179 ] Session Metrics {
+    248187 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2201238 nanoseconds spent preparing 34 JDBC statements;
+    19256166 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    539643 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:32:22 [ qtp1836643189-176 ] Session Metrics {
+    1153801 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2582533 nanoseconds spent preparing 34 JDBC statements;
+    16953971 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    465727 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7812 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:37:27 [ qtp1836643189-188 ] Session Metrics {
+    210629 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1621027 nanoseconds spent preparing 34 JDBC statements;
+    13991042 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    423962 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6610 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:37:44 [ qtp1836643189-186 ] Session Metrics {
+    35155 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    478948 nanoseconds spent preparing 34 JDBC statements;
+    13493767 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    262610 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6010 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:38:18 [ qtp1836643189-193 ] Session Metrics {
+    211530 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1351213 nanoseconds spent preparing 34 JDBC statements;
+    13109772 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    478647 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7512 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:38:52 [ qtp1836643189-186 ] Session Metrics {
+    345239 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1348207 nanoseconds spent preparing 34 JDBC statements;
+    14526179 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    448300 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    4507 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:39:31 [ qtp1836643189-186 ] Session Metrics {
+    269821 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1482213 nanoseconds spent preparing 34 JDBC statements;
+    14924307 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    301070 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    10216 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:40:08 [ qtp1836643189-186 ] Session Metrics {
+    225352 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1574458 nanoseconds spent preparing 34 JDBC statements;
+    14264472 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    291155 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:40:19 [ qtp1836643189-198 ] Session Metrics {
+    261107 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1594593 nanoseconds spent preparing 34 JDBC statements;
+    15356978 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    505089 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7211 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:41:22 [ qtp1836643189-203 ] Session Metrics {
+    239173 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1395072 nanoseconds spent preparing 34 JDBC statements;
+    12871495 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    254498 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    9014 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:42:01 [ qtp1836643189-210 ] Session Metrics {
+    202816 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1287510 nanoseconds spent preparing 34 JDBC statements;
+    11868833 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    281840 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5409 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:42:13 [ qtp1836643189-203 ] Session Metrics {
+    24639 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    626182 nanoseconds spent preparing 34 JDBC statements;
+    12947513 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    242779 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    4807 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:43:21 [ qtp1836643189-203 ] Session Metrics {
+    280638 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1390875 nanoseconds spent preparing 34 JDBC statements;
+    12484491 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    373783 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5409 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:43:33 [ qtp1836643189-119 ] Session Metrics {
+    311587 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1413406 nanoseconds spent preparing 34 JDBC statements;
+    12741391 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    231061 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:44:12 [ qtp1836643189-215 ] Session Metrics {
+    296863 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1320263 nanoseconds spent preparing 34 JDBC statements;
+    13178576 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    271023 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    4507 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:44:37 [ qtp1836643189-220 ] Session Metrics {
+    238873 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1316357 nanoseconds spent preparing 34 JDBC statements;
+    13770500 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    283643 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:46:18 [ qtp1836643189-226 ] Session Metrics {
+    188394 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1212692 nanoseconds spent preparing 34 JDBC statements;
+    12946011 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    311586 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    12620 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:46:32 [ qtp1836643189-226 ] Session Metrics {
+    276732 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1478607 nanoseconds spent preparing 34 JDBC statements;
+    14549316 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    256601 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7512 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:47:42 [ qtp1836643189-119 ] Session Metrics {
+    268619 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1258666 nanoseconds spent preparing 34 JDBC statements;
+    12202048 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    219944 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5408 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:54:17 [ qtp1836643189-239 ] Session Metrics {
+    354553 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1812731 nanoseconds spent preparing 34 JDBC statements;
+    16894781 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    537239 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6910 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:56:26 [ qtp1836643189-239 ] Session Metrics {
+    204319 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1418517 nanoseconds spent preparing 34 JDBC statements;
+    14349504 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    551662 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    9014 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:57:39 [ qtp1836643189-244 ] Session Metrics {
+    340431 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1443453 nanoseconds spent preparing 34 JDBC statements;
+    14814326 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    338028 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:58:13 [ qtp1836643189-238 ] Session Metrics {
+    243080 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1460879 nanoseconds spent preparing 34 JDBC statements;
+    11608628 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    264413 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5408 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:58:34 [ qtp1836643189-244 ] Session Metrics {
+    300169 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1818742 nanoseconds spent preparing 34 JDBC statements;
+    17651958 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    413145 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6009 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:58:44 [ qtp1836643189-238 ] Session Metrics {
+    269521 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1231622 nanoseconds spent preparing 34 JDBC statements;
+    12416584 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    338929 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6610 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:59:02 [ qtp1836643189-247 ] Session Metrics {
+    249990 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1269180 nanoseconds spent preparing 34 JDBC statements;
+    11837583 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    399924 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    9014 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 02:59:57 [ qtp1836643189-257 ] Session Metrics {
+    234066 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1681420 nanoseconds spent preparing 34 JDBC statements;
+    13896697 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    408638 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5408 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:00:00 [ qtp1836643189-257 ] Session Metrics {
+    18929 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    572090 nanoseconds spent preparing 34 JDBC statements;
+    12520847 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    266816 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    4206 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:01:08 [ qtp1836643189-247 ] Session Metrics {
+    261107 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1440752 nanoseconds spent preparing 34 JDBC statements;
+    14415609 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    339230 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:03:36 [ qtp1836643189-260 ] Session Metrics {
+    251493 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1210289 nanoseconds spent preparing 34 JDBC statements;
+    11610129 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    232563 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:05:38 [ qtp1836643189-229 ] Session Metrics {
+    226854 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1119545 nanoseconds spent preparing 34 JDBC statements;
+    11400701 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    247286 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    4507 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:15:01 [ qtp1836643189-267 ] Session Metrics {
+    238572 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1263770 nanoseconds spent preparing 34 JDBC statements;
+    11716193 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    259305 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6611 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:15:42 [ qtp1836643189-283 ] Session Metrics {
+    257803 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1287212 nanoseconds spent preparing 34 JDBC statements;
+    13070708 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    215136 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7211 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:17:44 [ qtp1836643189-271 ] Session Metrics {
+    238573 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1164022 nanoseconds spent preparing 34 JDBC statements;
+    11882351 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    236469 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7211 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:18:52 [ qtp1836643189-277 ] Session Metrics {
+    222648 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1106624 nanoseconds spent preparing 34 JDBC statements;
+    11974296 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    399924 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:19:02 [ qtp1836643189-298 ] Session Metrics {
+    258403 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1507453 nanoseconds spent preparing 34 JDBC statements;
+    16447981 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    362967 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7511 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:20:38 [ qtp1836643189-267 ] Session Metrics {
+    243981 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1474998 nanoseconds spent preparing 34 JDBC statements;
+    14236228 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    238272 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5409 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:21:12 [ qtp1836643189-293 ] Session Metrics {
+    332319 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1306441 nanoseconds spent preparing 34 JDBC statements;
+    12783158 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    338930 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:21:47 [ qtp1836643189-293 ] Session Metrics {
+    241277 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1371338 nanoseconds spent preparing 34 JDBC statements;
+    14648172 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    370779 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    4507 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:23:16 [ qtp1836643189-277 ] Session Metrics {
+    251192 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1324465 nanoseconds spent preparing 34 JDBC statements;
+    12787665 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    227455 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7512 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:24:29 [ qtp1836643189-293 ] Session Metrics {
+    394516 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1130067 nanoseconds spent preparing 34 JDBC statements;
+    12293695 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    388206 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    9314 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:25:17 [ qtp1836643189-319 ] Session Metrics {
+    274328 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1164918 nanoseconds spent preparing 34 JDBC statements;
+    11695460 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    244282 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    18930 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:25:58 [ qtp1836643189-293 ] Session Metrics {
+    246985 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1479510 nanoseconds spent preparing 34 JDBC statements;
+    15088960 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    245483 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7512 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:26:26 [ qtp1836643189-293 ] Session Metrics {
+    214535 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1373142 nanoseconds spent preparing 34 JDBC statements;
+    14121147 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    212732 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:26:43 [ qtp1836643189-327 ] Session Metrics {
+    239474 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1323269 nanoseconds spent preparing 34 JDBC statements;
+    12761824 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    280638 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:27:06 [ qtp1836643189-324 ] Session Metrics {
+    317596 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1679925 nanoseconds spent preparing 34 JDBC statements;
+    15140641 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    323605 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5408 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:30:06 [ qtp1836643189-324 ] Session Metrics {
+    310384 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1294722 nanoseconds spent preparing 34 JDBC statements;
+    12824324 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    269221 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7511 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:30:25 [ qtp1836643189-324 ] Session Metrics {
+    257502 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1307640 nanoseconds spent preparing 34 JDBC statements;
+    13767496 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    201615 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5709 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:31:16 [ qtp1836643189-271 ] Session Metrics {
+    333521 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1452769 nanoseconds spent preparing 34 JDBC statements;
+    15426987 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    210929 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:31:33 [ qtp1836643189-271 ] Session Metrics {
+    228357 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1346101 nanoseconds spent preparing 34 JDBC statements;
+    12872700 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    480751 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6009 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:36:21 [ qtp1836643189-345 ] Session Metrics {
+    304375 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1425424 nanoseconds spent preparing 34 JDBC statements;
+    14197464 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    232863 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    11417 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:37:20 [ qtp1836643189-348 ] Session Metrics {
+    230460 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1001760 nanoseconds spent preparing 34 JDBC statements;
+    10436498 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    223850 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7512 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:38:17 [ qtp1836643189-345 ] Session Metrics {
+    270423 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1207285 nanoseconds spent preparing 34 JDBC statements;
+    12747096 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    458816 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    27643 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:40:28 [ qtp1836643189-357 ] Session Metrics {
+    281539 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1234028 nanoseconds spent preparing 34 JDBC statements;
+    13253990 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    371981 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6009 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:41:38 [ qtp1836643189-353 ] Session Metrics {
+    261408 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1181745 nanoseconds spent preparing 34 JDBC statements;
+    11152215 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    341934 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    10817 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:41:54 [ qtp1836643189-353 ] Session Metrics {
+    274329 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1217196 nanoseconds spent preparing 34 JDBC statements;
+    14128362 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    334723 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5408 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:42:20 [ qtp1836643189-353 ] Session Metrics {
+    219342 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1025805 nanoseconds spent preparing 34 JDBC statements;
+    10913636 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    218441 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    4507 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:43:01 [ qtp1836643189-357 ] Session Metrics {
+    177277 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1183848 nanoseconds spent preparing 34 JDBC statements;
+    11076495 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    249389 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7211 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:44:04 [ qtp1836643189-357 ] Session Metrics {
+    261708 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1251158 nanoseconds spent preparing 34 JDBC statements;
+    11508269 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    234967 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5409 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 03:44:24 [ qtp1836643189-368 ] Session Metrics {
+    323905 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1381858 nanoseconds spent preparing 34 JDBC statements;
+    14717577 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    334723 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    8714 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:21:20 [ main ] Root WebApplicationContext: initialization started
+2019-04-20 18:21:21 [ main ] Refreshing Root WebApplicationContext: startup date [Sat Apr 20 18:21:21 CST 2019]; root of context hierarchy
+2019-04-20 18:21:21 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-04-20 18:21:21 [ main ] Loading properties file from class path resource [wx-config.properties]
+2019-04-20 18:21:21 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-04-20 18:21:21 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-04-20 18:21:21 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-04-20 18:21:21 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\wx-config.properties]
+2019-04-20 18:21:22 [ main ] MLog clients using log4j logging.
+2019-04-20 18:21:22 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-04-20 18:21:22 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-04-20 18:21:22 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-04-20 18:21:22 [ main ] HHH000206: hibernate.properties not found
+2019-04-20 18:21:22 [ main ] HHH000021: Bytecode provider name : javassist
+2019-04-20 18:21:22 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2g5zo1jadbg04|319854f0, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2g5zo1jadbg04|319854f0, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-04-20 18:21:23 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-04-20 18:21:23 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-04-20 18:21:23 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+2019-04-20 18:21:23 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+2019-04-20 18:21:23 [ main ] Unrecognized value for "hibernate.hbm2ddl.auto": none
+2019-04-20 18:21:23 [ main ] HHH020007: read-only cache configured for mutable entity [indi.shaw.coco.model.Code]
+2019-04-20 18:21:24 [ main ] Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2g5zo1jadbg04|319854f0, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2g5zo1jadbg04|319854f0, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+2019-04-20 18:21:24 [ main ] Root WebApplicationContext: initialization completed in 3353 ms
+2019-04-20 18:21:24 [ main ] FrameworkServlet 'springmvc': initialization started
+2019-04-20 18:21:24 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Sat Apr 20 18:21:24 CST 2019]; parent: Root WebApplicationContext
+2019-04-20 18:21:24 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2019-04-20 18:21:24 [ main ] Overriding bean definition for bean 'mvcContentNegotiationManager': replacing [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-20 18:21:24 [ main ] Overriding bean definition for bean 'mvcUriComponentsContributor': replacing [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-20 18:21:24 [ main ] Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2019-04-20 18:21:24 [ main ] Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2019-04-20 18:21:24 [ main ] Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+2019-04-20 18:21:24 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-20 18:21:24 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/wx/receiveUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.receiveUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/wx/onLogin],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.onLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/wx/getUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-20 18:21:24 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/wx/receiveUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.receiveUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/wx/onLogin],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.onLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] Mapped "{[/wx/getUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 18:21:24 [ main ] FrameworkServlet 'springmvc': initialization completed in 516 ms
+2019-04-20 18:25:09 [ qtp1836643189-45 ] Session Metrics {
+    505389 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    23398747 nanoseconds spent preparing 1 JDBC statements;
+    1450064 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    42666 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:25:10 [ qtp1836643189-48 ] Session Metrics {
+    22536 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    170066 nanoseconds spent preparing 1 JDBC statements;
+    731342 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    6010 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:25:11 [ qtp1836643189-27 ] Session Metrics {
+    23737 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1828353 nanoseconds spent preparing 24 JDBC statements;
+    16812462 nanoseconds spent executing 24 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    14814338 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 12 collections);
+    6010 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:25:20 [ qtp1836643189-45 ] Session Metrics {
+    25840 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1073575 nanoseconds spent preparing 24 JDBC statements;
+    16460008 nanoseconds spent executing 24 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1366534 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 12 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:25:28 [ qtp1836643189-48 ] SQL Error: 1406, SQLState: 22001
+2019-04-20 18:25:28 [ qtp1836643189-48 ] Data truncation: Data too long for column 'telephone' at row 1
+2019-04-20 18:25:28 [ qtp1836643189-21 ] Session Metrics {
+    296864 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1448564 nanoseconds spent preparing 23 JDBC statements;
+    9499940 nanoseconds spent executing 23 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    44392537 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:25:28 [ qtp1836643189-48 ] Session Metrics {
+    28845 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    900205 nanoseconds spent preparing 4 JDBC statements;
+    23218465 nanoseconds spent executing 4 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:26:27 [ qtp1836643189-45 ] Session Metrics {
+    206423 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2372503 nanoseconds spent preparing 34 JDBC statements;
+    17902558 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1371341 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5409 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:26:28 [ qtp1836643189-21 ] Session Metrics {
+    35155 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1254161 nanoseconds spent preparing 24 JDBC statements;
+    16627372 nanoseconds spent executing 24 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    867755 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 12 collections);
+    7211 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:26:39 [ qtp1836643189-19 ] Session Metrics {
+    186291 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1967173 nanoseconds spent preparing 24 JDBC statements;
+    12764234 nanoseconds spent executing 24 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    894497 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 12 collections);
+    14122 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:26:54 [ qtp1836643189-19 ] Session Metrics {
+    24037 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1216300 nanoseconds spent preparing 34 JDBC statements;
+    15760816 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    964206 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6009 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:26:55 [ qtp1836643189-45 ] Session Metrics {
+    31249 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1063364 nanoseconds spent preparing 24 JDBC statements;
+    14469101 nanoseconds spent executing 24 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1003267 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 12 collections);
+    5409 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:27:04 [ qtp1836643189-49 ] Session Metrics {
+    25239 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1045631 nanoseconds spent preparing 24 JDBC statements;
+    13241082 nanoseconds spent executing 24 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    673653 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 12 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:27:13 [ qtp1836643189-19 ] Session Metrics {
+    25540 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1219304 nanoseconds spent preparing 24 JDBC statements;
+    12941215 nanoseconds spent executing 24 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1028807 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 12 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:27:40 [ qtp1836643189-21 ] SQL Error: 1406, SQLState: 22001
+2019-04-20 18:27:40 [ qtp1836643189-21 ] Data truncation: Data too long for column 'telephone' at row 1
+2019-04-20 18:27:40 [ qtp1836643189-21 ] Session Metrics {
+    479249 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    3739039 nanoseconds spent preparing 4 JDBC statements;
+    15347972 nanoseconds spent executing 4 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:28:12 [ qtp1836643189-49 ] Session Metrics {
+    371981 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2948502 nanoseconds spent preparing 23 JDBC statements;
+    11499562 nanoseconds spent executing 23 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    31533052 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:28:19 [ qtp1836643189-48 ] Session Metrics {
+    24939 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1595489 nanoseconds spent preparing 23 JDBC statements;
+    8358754 nanoseconds spent executing 23 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    21929151 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:28:39 [ qtp1836643189-45 ] SQL Error: 1406, SQLState: 22001
+2019-04-20 18:28:39 [ qtp1836643189-45 ] Data truncation: Data too long for column 'telephone' at row 1
+2019-04-20 18:28:39 [ qtp1836643189-45 ] Session Metrics {
+    94648 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1582570 nanoseconds spent preparing 4 JDBC statements;
+    7793572 nanoseconds spent executing 4 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:28:57 [ qtp1836643189-48 ] Session Metrics {
+    195605 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1989708 nanoseconds spent preparing 34 JDBC statements;
+    17249946 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    803155 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    4507 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:29:05 [ qtp1836643189-45 ] Session Metrics {
+    27644 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    829295 nanoseconds spent preparing 24 JDBC statements;
+    12722168 nanoseconds spent executing 24 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    678760 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 12 collections);
+    4507 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:29:09 [ qtp1836643189-46 ] Session Metrics {
+    22234 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1066071 nanoseconds spent preparing 24 JDBC statements;
+    11351430 nanoseconds spent executing 24 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    614460 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 12 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:29:14 [ qtp1836643189-45 ] Session Metrics {
+    423361 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2328937 nanoseconds spent preparing 23 JDBC statements;
+    12249833 nanoseconds spent executing 23 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    29547250 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:32:42 [ qtp1836643189-48 ] SQL Error: 1406, SQLState: 22001
+2019-04-20 18:32:42 [ qtp1836643189-48 ] Data truncation: Data too long for column 'telephone' at row 1
+2019-04-20 18:32:42 [ qtp1836643189-48 ] Session Metrics {
+    24639 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1684731 nanoseconds spent preparing 4 JDBC statements;
+    8539639 nanoseconds spent executing 4 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:33:27 [ qtp1836643189-48 ] Session Metrics {
+    296263 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1805518 nanoseconds spent preparing 34 JDBC statements;
+    14099821 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    850628 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:33:34 [ qtp1836643189-50 ] Session Metrics {
+    25239 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    745466 nanoseconds spent preparing 24 JDBC statements;
+    13657230 nanoseconds spent executing 24 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1071173 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 12 collections);
+    5409 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:33:39 [ qtp1836643189-55 ] Session Metrics {
+    179380 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1652582 nanoseconds spent preparing 24 JDBC statements;
+    10277855 nanoseconds spent executing 24 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    592525 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 12 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:33:54 [ qtp1836643189-50 ] Session Metrics {
+    208526 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    5814682 nanoseconds spent preparing 19 JDBC statements;
+    8726230 nanoseconds spent executing 19 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    9803111 nanoseconds spent executing 1 flushes (flushing a total of 13 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:33:54 [ qtp1836643189-56 ] Session Metrics {
+    28244 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    7287582 nanoseconds spent preparing 23 JDBC statements;
+    8859937 nanoseconds spent executing 23 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    29726630 nanoseconds spent executing 1 flushes (flushing a total of 23 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:34:09 [ qtp1836643189-49 ] Session Metrics {
+    215737 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1610517 nanoseconds spent preparing 34 JDBC statements;
+    14788498 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    526723 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:34:10 [ qtp1836643189-50 ] Session Metrics {
+    27644 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1149298 nanoseconds spent preparing 37 JDBC statements;
+    17822033 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    479849 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 19 collections);
+    4807 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:37:26 [ qtp1836643189-59 ] Session Metrics {
+    334723 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1688639 nanoseconds spent preparing 34 JDBC statements;
+    14517774 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    605747 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 18:37:29 [ qtp1836643189-57 ] Session Metrics {
+    37559 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    995157 nanoseconds spent preparing 37 JDBC statements;
+    18898918 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    692582 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 19 collections);
+    4808 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 21:15:01 [ qtp1836643189-215 ] Session Metrics {
+    361765 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2320526 nanoseconds spent preparing 34 JDBC statements;
+    15467858 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    560075 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    10516 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 21:15:20 [ qtp1836643189-46 ] Session Metrics {
+    325107 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1851495 nanoseconds spent preparing 37 JDBC statements;
+    17793493 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    449502 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 19 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:00:41 [ qtp1836643189-321 ] Session Metrics {
+    246686 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1763454 nanoseconds spent preparing 34 JDBC statements;
+    13750077 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    338929 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5708 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:00:46 [ qtp1836643189-323 ] Session Metrics {
+    17728 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    459118 nanoseconds spent preparing 37 JDBC statements;
+    12778058 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    365070 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 19 collections);
+    18029 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:01:03 [ qtp1836643189-322 ] Session Metrics {
+    24939 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    752075 nanoseconds spent preparing 34 JDBC statements;
+    14545724 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    441991 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:01:09 [ qtp1836643189-58 ] Session Metrics {
+    23737 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    842512 nanoseconds spent preparing 34 JDBC statements;
+    15334148 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    455211 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6010 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:01:17 [ qtp1836643189-322 ] Session Metrics {
+    30648 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    507188 nanoseconds spent preparing 37 JDBC statements;
+    12768442 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    282441 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 19 collections);
+    4507 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:01:50 [ qtp1836643189-58 ] Session Metrics {
+    287549 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1342194 nanoseconds spent preparing 34 JDBC statements;
+    13281638 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    230460 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:01:52 [ qtp1836643189-216 ] Session Metrics {
+    18028 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    491266 nanoseconds spent preparing 37 JDBC statements;
+    14506059 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    253596 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 19 collections);
+    4206 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:07:32 [ qtp1836643189-333 ] Session Metrics {
+    242780 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1636055 nanoseconds spent preparing 34 JDBC statements;
+    15361495 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    530028 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6610 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:11:59 [ qtp1836643189-215 ] Session Metrics {
+    444694 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1401989 nanoseconds spent preparing 34 JDBC statements;
+    12176819 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    481052 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6610 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:16:45 [ qtp1836643189-345 ] Session Metrics {
+    211531 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1648677 nanoseconds spent preparing 34 JDBC statements;
+    14417417 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    369277 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6009 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:18:22 [ qtp1836643189-345 ] Session Metrics {
+    261709 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1801315 nanoseconds spent preparing 34 JDBC statements;
+    15298993 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    354254 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6610 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:19:35 [ qtp1836643189-362 ] Session Metrics {
+    373784 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1761950 nanoseconds spent preparing 34 JDBC statements;
+    14463396 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    255699 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7512 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:22:31 [ qtp1836643189-215 ] Session Metrics {
+    539943 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1406196 nanoseconds spent preparing 37 JDBC statements;
+    10741777 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    351849 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 19 collections);
+    5409 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:24:18 [ qtp1836643189-366 ] Session Metrics {
+    289953 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1249047 nanoseconds spent preparing 34 JDBC statements;
+    12888633 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    264713 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    8714 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:24:23 [ qtp1836643189-367 ] Session Metrics {
+    237070 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1331078 nanoseconds spent preparing 37 JDBC statements;
+    12397965 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    268019 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 19 collections);
+    5709 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:27:22 [ qtp1836643189-373 ] Session Metrics {
+    245483 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1609012 nanoseconds spent preparing 34 JDBC statements;
+    14055354 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    433277 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7211 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:27:25 [ qtp1836643189-372 ] Session Metrics {
+    324507 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1122857 nanoseconds spent preparing 37 JDBC statements;
+    11488140 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    259305 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 19 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:28:57 [ qtp1836643189-352 ] Session Metrics {
+    212732 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1285406 nanoseconds spent preparing 34 JDBC statements;
+    12253139 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    332018 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    4807 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:29:11 [ qtp1836643189-379 ] Session Metrics {
+    210028 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1232524 nanoseconds spent preparing 37 JDBC statements;
+    12734188 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    225652 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 19 collections);
+    15024 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:31:00 [ qtp1836643189-372 ] Session Metrics {
+    273127 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1374951 nanoseconds spent preparing 34 JDBC statements;
+    12290698 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    375586 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7512 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:31:09 [ qtp1836643189-385 ] Session Metrics {
+    18630 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    717824 nanoseconds spent preparing 37 JDBC statements;
+    13860348 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    270723 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 19 collections);
+    5408 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:32:20 [ qtp1836643189-387 ] Session Metrics {
+    295662 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1591887 nanoseconds spent preparing 34 JDBC statements;
+    12893437 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    303173 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    6610 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:37:53 [ qtp1836643189-388 ] Session Metrics {
+    281540 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2126720 nanoseconds spent preparing 34 JDBC statements;
+    15044498 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1036019 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7512 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:42:31 [ qtp1836643189-395 ] Session Metrics {
+    286648 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2111998 nanoseconds spent preparing 34 JDBC statements;
+    16785716 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1100018 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    5708 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:45:07 [ qtp1836643189-395 ] Session Metrics {
+    316394 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1404995 nanoseconds spent preparing 34 JDBC statements;
+    14050545 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    252395 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    7512 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-20 23:48:10 [ main ] Root WebApplicationContext: initialization started
+2019-04-20 23:48:10 [ main ] Refreshing Root WebApplicationContext: startup date [Sat Apr 20 23:48:10 CST 2019]; root of context hierarchy
+2019-04-20 23:48:10 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-04-20 23:48:10 [ main ] Loading properties file from class path resource [wx-config.properties]
+2019-04-20 23:48:10 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-04-20 23:48:10 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-04-20 23:48:10 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-04-20 23:48:10 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\wx-config.properties]
+2019-04-20 23:48:11 [ main ] MLog clients using log4j logging.
+2019-04-20 23:48:11 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-04-20 23:48:11 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-04-20 23:48:11 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-04-20 23:48:11 [ main ] HHH000206: hibernate.properties not found
+2019-04-20 23:48:11 [ main ] HHH000021: Bytecode provider name : javassist
+2019-04-20 23:48:11 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2ghnygnfd4k3x|393881f0, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2ghnygnfd4k3x|393881f0, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-04-20 23:48:12 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-04-20 23:48:12 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-04-20 23:48:12 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+2019-04-20 23:48:12 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+2019-04-20 23:48:12 [ main ] Unrecognized value for "hibernate.hbm2ddl.auto": none
+2019-04-20 23:48:12 [ main ] HHH020007: read-only cache configured for mutable entity [indi.shaw.coco.model.Code]
+2019-04-20 23:48:13 [ main ] Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2ghnygnfd4k3x|393881f0, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2ghnygnfd4k3x|393881f0, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+2019-04-20 23:48:13 [ main ] Root WebApplicationContext: initialization completed in 3343 ms
+2019-04-20 23:48:13 [ main ] FrameworkServlet 'springmvc': initialization started
+2019-04-20 23:48:13 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Sat Apr 20 23:48:13 CST 2019]; parent: Root WebApplicationContext
+2019-04-20 23:48:13 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2019-04-20 23:48:13 [ main ] Overriding bean definition for bean 'mvcContentNegotiationManager': replacing [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-20 23:48:13 [ main ] Overriding bean definition for bean 'mvcUriComponentsContributor': replacing [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-20 23:48:13 [ main ] Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2019-04-20 23:48:13 [ main ] Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2019-04-20 23:48:13 [ main ] Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+2019-04-20 23:48:13 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-20 23:48:13 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/wx/getUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/wx/onLogin],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.onLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/wx/receiveUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.receiveUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-20 23:48:13 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/wx/getUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/wx/onLogin],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.onLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] Mapped "{[/wx/receiveUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.receiveUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-20 23:48:13 [ main ] FrameworkServlet 'springmvc': initialization completed in 498 ms
+2019-04-20 23:48:20 [ qtp1836643189-43 ] Session Metrics {
+    55286 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    33641444 nanoseconds spent preparing 34 JDBC statements;
+    44924671 nanoseconds spent executing 34 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    14697456 nanoseconds spent executing 1 flushes (flushing a total of 33 entities and 17 collections);
+    44470 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}

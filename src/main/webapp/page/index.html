@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<link rel="stylesheet" type="text/css" href="/coco/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/coco/css/bootstrap-datepicker3.min.css">
+<link rel="stylesheet" type="text/css" href="/coco/css/swiper.min.css">
+<title>coco</title>
+<script type="text/javascript" src="/coco/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/coco/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/coco/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="/coco/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="/coco/js/bubbly-bg.js"></script>
+<script type="text/javascript" src="/coco/js/bubbly-bg.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.post("https://localhost/coco/user/isRelogin.do", {}, function(res) {
+			console.log(res);
+			if (res.data.isRelogin) {
+				$("#content-body").load("/coco/page/reservation.html", function(res) {
+					console.log("load reservation");
+					loadScript();//原本HTML页面的LOAD方法
+				});
+			} else {
+				toLogin();
+			}
+		}, "json");
+		var toLogin = function() {
+			$("#content-body").load("https://localhost/coco/user/login.do",
+					function(res) {
+						console.log(res);
+					});
+		};
+	});
+</script>
+</head>
+<body class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">COCO</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+          <li><a id="joinPlan" href="#">加入计划</a></li>
+          <li><a id="save" href="#">保存</a></li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="content-body" class="" style="margin: 60px 30px 0px 30px; height: 400px"></div>
+</body>
+</html>

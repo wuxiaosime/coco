@@ -1,0 +1,743 @@
+2019-05-04 03:28:16 [ main ] Root WebApplicationContext: initialization started
+2019-05-04 03:28:16 [ main ] Refreshing Root WebApplicationContext: startup date [Sat May 04 03:28:16 CST 2019]; root of context hierarchy
+2019-05-04 03:28:16 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-05-04 03:28:16 [ main ] Loading properties file from class path resource [wx-config.properties]
+2019-05-04 03:28:16 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-05-04 03:28:16 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-05-04 03:28:16 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-05-04 03:28:16 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\wx-config.properties]
+2019-05-04 03:28:16 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:28:16 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:28:16 [ main ] Bean 'org.springframework.cache.annotation.AnnotationCacheOperationSource#0' of type [class org.springframework.cache.annotation.AnnotationCacheOperationSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:28:17 [ main ] Bean 'org.springframework.cache.config.internalCacheAdvisor' of type [class org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:28:17 [ main ] Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:28:17 [ main ] Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:28:17 [ main ] Bean 'sessionManager' of type [class org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:28:17 [ main ] Bean 'shiroCacheManager' of type [class org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:28:17 [ main ] Bean 'rememberMeCookie' of type [class org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:28:17 [ main ] Bean 'rememberMeManager' of type [class org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:28:17 [ main ] Bean 'securityManager' of type [class org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:28:17 [ main ] Initializing EhCache CacheManager
+2019-05-04 03:28:17 [ main ] MLog clients using log4j logging.
+2019-05-04 03:28:17 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-05-04 03:28:18 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-05-04 03:28:18 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-05-04 03:28:18 [ main ] HHH000206: hibernate.properties not found
+2019-05-04 03:28:18 [ main ] HHH000021: Bytecode provider name : javassist
+2019-05-04 03:28:18 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2za93gw1we2jh9|12010fd1, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2za93gw1we2jh9|12010fd1, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-05-04 03:28:18 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-05-04 03:28:18 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-05-04 03:28:18 [ main ] Shutting down EhCache CacheManager
+2019-05-04 03:28:18 [ main ] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'addressDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory indi.shaw.coco.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:835)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:530)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:808)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:342)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1379)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1341)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:772)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:259)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:517)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:405)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:372)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:89)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory indi.shaw.coco.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 32 more
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:769)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:729)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:70)
+	at org.hibernate.cfg.Configuration.originalSecondPassCompile(Configuration.java:1697)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1426)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1846)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1930)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:431)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 42 more
+2019-05-04 03:29:15 [ main ] Root WebApplicationContext: initialization started
+2019-05-04 03:29:15 [ main ] Refreshing Root WebApplicationContext: startup date [Sat May 04 03:29:15 CST 2019]; root of context hierarchy
+2019-05-04 03:29:15 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-05-04 03:29:15 [ main ] Loading properties file from class path resource [wx-config.properties]
+2019-05-04 03:29:15 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-05-04 03:29:15 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-05-04 03:29:15 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-05-04 03:29:15 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\wx-config.properties]
+2019-05-04 03:29:15 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:29:15 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:29:15 [ main ] Bean 'org.springframework.cache.annotation.AnnotationCacheOperationSource#0' of type [class org.springframework.cache.annotation.AnnotationCacheOperationSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:29:16 [ main ] Bean 'org.springframework.cache.config.internalCacheAdvisor' of type [class org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:29:16 [ main ] Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:29:16 [ main ] Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:29:16 [ main ] Bean 'sessionManager' of type [class org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:29:16 [ main ] Bean 'shiroCacheManager' of type [class org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:29:16 [ main ] Bean 'rememberMeCookie' of type [class org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:29:16 [ main ] Bean 'rememberMeManager' of type [class org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:29:16 [ main ] Bean 'securityManager' of type [class org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:29:16 [ main ] Initializing EhCache CacheManager
+2019-05-04 03:29:16 [ main ] MLog clients using log4j logging.
+2019-05-04 03:29:16 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-05-04 03:29:17 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-05-04 03:29:17 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-05-04 03:29:17 [ main ] HHH000206: hibernate.properties not found
+2019-05-04 03:29:17 [ main ] HHH000021: Bytecode provider name : javassist
+2019-05-04 03:29:17 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2zaad0a1h1dw10|7c84195, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2zaad0a1h1dw10|7c84195, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-05-04 03:29:17 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-05-04 03:29:17 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-05-04 03:29:17 [ main ] Shutting down EhCache CacheManager
+2019-05-04 03:29:17 [ main ] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'addressDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory indi.shaw.coco.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:835)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:530)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:808)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:342)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1379)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1341)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:772)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:259)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:517)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:405)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:372)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:89)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory indi.shaw.coco.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 32 more
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:769)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:729)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:70)
+	at org.hibernate.cfg.Configuration.originalSecondPassCompile(Configuration.java:1697)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1426)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1846)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1930)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:431)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 42 more
+2019-05-04 03:31:27 [ main ] Root WebApplicationContext: initialization started
+2019-05-04 03:31:27 [ main ] Refreshing Root WebApplicationContext: startup date [Sat May 04 03:31:27 CST 2019]; root of context hierarchy
+2019-05-04 03:31:27 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-05-04 03:31:27 [ main ] Loading properties file from class path resource [wx-config.properties]
+2019-05-04 03:31:27 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-05-04 03:31:27 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-05-04 03:31:27 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-05-04 03:31:27 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\wx-config.properties]
+2019-05-04 03:31:28 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:31:28 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:31:28 [ main ] Bean 'org.springframework.cache.annotation.AnnotationCacheOperationSource#0' of type [class org.springframework.cache.annotation.AnnotationCacheOperationSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:31:28 [ main ] Bean 'org.springframework.cache.config.internalCacheAdvisor' of type [class org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:31:28 [ main ] Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:31:28 [ main ] Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:31:28 [ main ] Bean 'sessionManager' of type [class org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:31:28 [ main ] Bean 'shiroCacheManager' of type [class org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:31:28 [ main ] Bean 'rememberMeCookie' of type [class org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:31:28 [ main ] Bean 'rememberMeManager' of type [class org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:31:28 [ main ] Bean 'securityManager' of type [class org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:31:28 [ main ] Initializing EhCache CacheManager
+2019-05-04 03:31:28 [ main ] MLog clients using log4j logging.
+2019-05-04 03:31:28 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-05-04 03:31:29 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-05-04 03:31:29 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-05-04 03:31:29 [ main ] HHH000206: hibernate.properties not found
+2019-05-04 03:31:29 [ main ] HHH000021: Bytecode provider name : javassist
+2019-05-04 03:31:29 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2zad6wv12clit9|7c84195, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2zad6wv12clit9|7c84195, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-05-04 03:31:29 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-05-04 03:31:29 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-05-04 03:31:30 [ main ] Shutting down EhCache CacheManager
+2019-05-04 03:31:30 [ main ] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'addressDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory indi.shaw.coco.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:835)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:530)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:808)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:342)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1379)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1341)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:772)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:259)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:517)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:405)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:372)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:89)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory indi.shaw.coco.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 32 more
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:769)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:729)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:70)
+	at org.hibernate.cfg.Configuration.originalSecondPassCompile(Configuration.java:1697)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1426)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1846)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1930)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:431)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 42 more
+2019-05-04 03:32:39 [ main ] Root WebApplicationContext: initialization started
+2019-05-04 03:32:39 [ main ] Refreshing Root WebApplicationContext: startup date [Sat May 04 03:32:39 CST 2019]; root of context hierarchy
+2019-05-04 03:32:39 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-05-04 03:32:40 [ main ] Loading properties file from class path resource [wx-config.properties]
+2019-05-04 03:32:40 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-05-04 03:32:40 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-05-04 03:32:40 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-05-04 03:32:40 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\wx-config.properties]
+2019-05-04 03:32:40 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:32:40 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:32:40 [ main ] Bean 'org.springframework.cache.annotation.AnnotationCacheOperationSource#0' of type [class org.springframework.cache.annotation.AnnotationCacheOperationSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:32:40 [ main ] Bean 'org.springframework.cache.config.internalCacheAdvisor' of type [class org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:32:40 [ main ] Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:32:40 [ main ] Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:32:40 [ main ] Bean 'sessionManager' of type [class org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:32:40 [ main ] Bean 'shiroCacheManager' of type [class org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:32:40 [ main ] Bean 'rememberMeCookie' of type [class org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:32:40 [ main ] Bean 'rememberMeManager' of type [class org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:32:40 [ main ] Bean 'securityManager' of type [class org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:32:40 [ main ] Initializing EhCache CacheManager
+2019-05-04 03:32:41 [ main ] MLog clients using log4j logging.
+2019-05-04 03:32:41 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-05-04 03:32:41 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-05-04 03:32:41 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-05-04 03:32:41 [ main ] HHH000206: hibernate.properties not found
+2019-05-04 03:32:41 [ main ] HHH000021: Bytecode provider name : javassist
+2019-05-04 03:32:41 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2zaeqjmaewwh3|7c84195, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2zaeqjmaewwh3|7c84195, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-05-04 03:32:41 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-05-04 03:32:41 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-05-04 03:32:42 [ main ] Shutting down EhCache CacheManager
+2019-05-04 03:32:42 [ main ] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'addressDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory indi.shaw.coco.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:835)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:530)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:808)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:342)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1379)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1341)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:772)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:259)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:517)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:405)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:372)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:89)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory indi.shaw.coco.dao.impl.BaseDaoImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 32 more
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: indi.shaw.coco.model.Role.permissions in indi.shaw.coco.model.Permission.roles
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:769)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:729)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:70)
+	at org.hibernate.cfg.Configuration.originalSecondPassCompile(Configuration.java:1697)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1426)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1846)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1930)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:431)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 42 more
+2019-05-04 03:33:39 [ main ] Root WebApplicationContext: initialization started
+2019-05-04 03:33:39 [ main ] Refreshing Root WebApplicationContext: startup date [Sat May 04 03:33:39 CST 2019]; root of context hierarchy
+2019-05-04 03:33:39 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-05-04 03:33:39 [ main ] Loading properties file from class path resource [wx-config.properties]
+2019-05-04 03:33:39 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-05-04 03:33:39 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-05-04 03:33:39 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-05-04 03:33:39 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\wx-config.properties]
+2019-05-04 03:33:39 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:33:39 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:33:39 [ main ] Bean 'org.springframework.cache.annotation.AnnotationCacheOperationSource#0' of type [class org.springframework.cache.annotation.AnnotationCacheOperationSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:33:40 [ main ] Bean 'org.springframework.cache.config.internalCacheAdvisor' of type [class org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:33:40 [ main ] Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:33:40 [ main ] Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:33:40 [ main ] Bean 'sessionManager' of type [class org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:33:40 [ main ] Bean 'shiroCacheManager' of type [class org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:33:40 [ main ] Bean 'rememberMeCookie' of type [class org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:33:40 [ main ] Bean 'rememberMeManager' of type [class org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:33:40 [ main ] Bean 'securityManager' of type [class org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:33:40 [ main ] Initializing EhCache CacheManager
+2019-05-04 03:33:40 [ main ] MLog clients using log4j logging.
+2019-05-04 03:33:40 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-05-04 03:33:41 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-05-04 03:33:41 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-05-04 03:33:41 [ main ] HHH000206: hibernate.properties not found
+2019-05-04 03:33:41 [ main ] HHH000021: Bytecode provider name : javassist
+2019-05-04 03:33:41 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2zag0ps6vcufl|7c84195, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2zag0ps6vcufl|7c84195, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-05-04 03:33:41 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-05-04 03:33:41 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-05-04 03:33:41 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+2019-05-04 03:33:41 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+2019-05-04 03:33:42 [ main ] Unrecognized value for "hibernate.hbm2ddl.auto": none
+2019-05-04 03:33:42 [ main ] Creating a new instance of CacheManager using the diskStorePath "C:\Users\shaw\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$DefaultConfigurationSource@4aa11206.
+The diskStore path for this CacheManager will be set to C:\Users\shaw\AppData\Local\Temp\\ehcache_auto_created_1556912022034.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.
+2019-05-04 03:33:42 [ main ] HHH020007: read-only cache configured for mutable entity [indi.shaw.coco.model.Code]
+2019-05-04 03:33:42 [ main ] Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2zag0ps6vcufl|7c84195, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2zag0ps6vcufl|7c84195, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+2019-05-04 03:33:43 [ main ] Root WebApplicationContext: initialization completed in 4108 ms
+2019-05-04 03:33:43 [ main ] FrameworkServlet 'springmvc': initialization started
+2019-05-04 03:33:43 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Sat May 04 03:33:43 CST 2019]; parent: Root WebApplicationContext
+2019-05-04 03:33:43 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2019-05-04 03:33:43 [ main ] Overriding bean definition for bean 'mvcContentNegotiationManager': replacing [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-05-04 03:33:43 [ main ] Overriding bean definition for bean 'mvcUriComponentsContributor': replacing [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-05-04 03:33:43 [ main ] Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2019-05-04 03:33:43 [ main ] Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2019-05-04 03:33:43 [ main ] Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+2019-05-04 03:33:43 [ main ] Mapped URL path [/page/user/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#3'
+2019-05-04 03:33:43 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-05-04 03:33:43 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/user/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.UserController.login(indi.shaw.coco.model.User,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/user/dologin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String indi.shaw.coco.menu.UserController.dologin(java.lang.String,java.lang.String)
+2019-05-04 03:33:43 [ main ] Mapped "{[/user/isRelogin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.UserController.isRelogin(indi.shaw.coco.model.User,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/wx/receiveUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.receiveUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/wx/onLogin],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.onLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/wx/getUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-05-04 03:33:43 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/user/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.UserController.login(indi.shaw.coco.model.User,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/user/dologin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String indi.shaw.coco.menu.UserController.dologin(java.lang.String,java.lang.String)
+2019-05-04 03:33:43 [ main ] Mapped "{[/user/isRelogin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.UserController.isRelogin(indi.shaw.coco.model.User,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/wx/receiveUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.receiveUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/wx/onLogin],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.onLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/wx/getUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:33:43 [ main ] FrameworkServlet 'springmvc': initialization completed in 647 ms
+2019-05-04 03:34:13 [ qtp1836643189-45 ] Enabling session validation scheduler...
+2019-05-04 03:46:15 [ main ] Root WebApplicationContext: initialization started
+2019-05-04 03:46:15 [ main ] Refreshing Root WebApplicationContext: startup date [Sat May 04 03:46:15 CST 2019]; root of context hierarchy
+2019-05-04 03:46:15 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-05-04 03:46:15 [ main ] Loading properties file from class path resource [wx-config.properties]
+2019-05-04 03:46:15 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-05-04 03:46:15 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-05-04 03:46:15 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-05-04 03:46:15 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\wx-config.properties]
+2019-05-04 03:46:15 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:15 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:15 [ main ] Bean 'org.springframework.cache.annotation.AnnotationCacheOperationSource#0' of type [class org.springframework.cache.annotation.AnnotationCacheOperationSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:16 [ main ] Bean 'org.springframework.cache.config.internalCacheAdvisor' of type [class org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:16 [ main ] Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:16 [ main ] Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:16 [ main ] Bean 'sessionManager' of type [class org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:16 [ main ] Bean 'shiroCacheManager' of type [class org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:16 [ main ] MLog clients using log4j logging.
+2019-05-04 03:46:16 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-05-04 03:46:16 [ main ] Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:16 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-05-04 03:46:16 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-05-04 03:46:16 [ main ] HHH000206: hibernate.properties not found
+2019-05-04 03:46:16 [ main ] HHH000021: Bytecode provider name : javassist
+2019-05-04 03:46:16 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2zaw7pj1bhp28j|773c0293, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2zaw7pj1bhp28j|773c0293, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-05-04 03:46:17 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-05-04 03:46:17 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-05-04 03:46:17 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+2019-05-04 03:46:17 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+2019-05-04 03:46:17 [ main ] Unrecognized value for "hibernate.hbm2ddl.auto": none
+2019-05-04 03:46:17 [ main ] HHH020007: read-only cache configured for mutable entity [indi.shaw.coco.model.Code]
+2019-05-04 03:46:18 [ main ] Bean 'sessionFactory' of type [class org.springframework.orm.hibernate4.LocalSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:18 [ main ] Bean 'sessionFactory' of type [class org.hibernate.internal.SessionFactoryImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:18 [ main ] Bean 'userDao' of type [class indi.shaw.coco.dao.impl.UserDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:46:18 [ main ] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shiroFilter' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Cannot resolve reference to bean 'securityManager' while setting bean property 'securityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityManager' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Cannot resolve reference to bean 'authenticator' while setting bean property 'authenticator'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticator': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private indi.shaw.coco.dao.PermissionDao indi.shaw.coco.security.UserRealm.permissionDao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [indi.shaw.coco.dao.PermissionDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:336)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:232)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:618)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:467)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:835)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:530)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:808)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:342)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1379)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1341)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:772)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:259)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:517)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:405)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:372)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:89)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityManager' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Cannot resolve reference to bean 'authenticator' while setting bean property 'authenticator'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticator': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private indi.shaw.coco.dao.PermissionDao indi.shaw.coco.security.UserRealm.permissionDao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [indi.shaw.coco.dao.PermissionDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:336)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	... 32 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticator': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private indi.shaw.coco.dao.PermissionDao indi.shaw.coco.security.UserRealm.permissionDao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [indi.shaw.coco.dao.PermissionDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	... 42 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private indi.shaw.coco.dao.PermissionDao indi.shaw.coco.security.UserRealm.permissionDao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [indi.shaw.coco.dao.PermissionDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 50 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [indi.shaw.coco.dao.PermissionDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:963)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 52 more
+2019-05-04 03:49:12 [ main ] Root WebApplicationContext: initialization started
+2019-05-04 03:49:12 [ main ] Refreshing Root WebApplicationContext: startup date [Sat May 04 03:49:12 CST 2019]; root of context hierarchy
+2019-05-04 03:49:12 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-05-04 03:49:13 [ main ] Loading properties file from class path resource [wx-config.properties]
+2019-05-04 03:49:13 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-05-04 03:49:13 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-05-04 03:49:13 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-05-04 03:49:13 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\wx-config.properties]
+2019-05-04 03:49:13 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:13 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:13 [ main ] Bean 'org.springframework.cache.annotation.AnnotationCacheOperationSource#0' of type [class org.springframework.cache.annotation.AnnotationCacheOperationSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:13 [ main ] Bean 'org.springframework.cache.config.internalCacheAdvisor' of type [class org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:13 [ main ] Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:13 [ main ] Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:13 [ main ] Bean 'sessionManager' of type [class org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:13 [ main ] Bean 'shiroCacheManager' of type [class org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:14 [ main ] MLog clients using log4j logging.
+2019-05-04 03:49:14 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-05-04 03:49:14 [ main ] Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:14 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-05-04 03:49:14 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-05-04 03:49:14 [ main ] HHH000206: hibernate.properties not found
+2019-05-04 03:49:14 [ main ] HHH000021: Bytecode provider name : javassist
+2019-05-04 03:49:14 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2zb00q41nddwkd|3a022576, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2zb00q41nddwkd|3a022576, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-05-04 03:49:14 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-05-04 03:49:14 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-05-04 03:49:15 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+2019-05-04 03:49:15 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+2019-05-04 03:49:15 [ main ] Unrecognized value for "hibernate.hbm2ddl.auto": none
+2019-05-04 03:49:15 [ main ] HHH020007: read-only cache configured for mutable entity [indi.shaw.coco.model.Code]
+2019-05-04 03:49:15 [ main ] Bean 'sessionFactory' of type [class org.springframework.orm.hibernate4.LocalSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:15 [ main ] Bean 'sessionFactory' of type [class org.hibernate.internal.SessionFactoryImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:15 [ main ] Bean 'userDao' of type [class indi.shaw.coco.dao.impl.UserDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:15 [ main ] Bean 'permissionDao' of type [class indi.shaw.coco.dao.impl.PermissionDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:15 [ main ] Bean 'authenticator' of type [class indi.shaw.coco.security.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:49:15 [ main ] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shiroFilter' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Cannot resolve reference to bean 'securityManager' while setting bean property 'securityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityManager' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Initialization of bean failed; nested exception is org.springframework.beans.ConversionNotSupportedException: Failed to convert property value of type 'indi.shaw.coco.security.UserRealm' to required type 'org.apache.shiro.authc.Authenticator' for property 'authenticator'; nested exception is java.lang.IllegalStateException: Cannot convert value of type [indi.shaw.coco.security.UserRealm] to required type [org.apache.shiro.authc.Authenticator] for property 'authenticator': no matching editors or conversion strategy found
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:336)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:232)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:618)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:467)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:835)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:530)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:808)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:342)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1379)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1341)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:772)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:259)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:517)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:405)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:372)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:89)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityManager' defined in file [D:\my-program\coco\target\classes\applicationContext.xml]: Initialization of bean failed; nested exception is org.springframework.beans.ConversionNotSupportedException: Failed to convert property value of type 'indi.shaw.coco.security.UserRealm' to required type 'org.apache.shiro.authc.Authenticator' for property 'authenticator'; nested exception is java.lang.IllegalStateException: Cannot convert value of type [indi.shaw.coco.security.UserRealm] to required type [org.apache.shiro.authc.Authenticator] for property 'authenticator': no matching editors or conversion strategy found
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:547)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	... 32 more
+Caused by: org.springframework.beans.ConversionNotSupportedException: Failed to convert property value of type 'indi.shaw.coco.security.UserRealm' to required type 'org.apache.shiro.authc.Authenticator' for property 'authenticator'; nested exception is java.lang.IllegalStateException: Cannot convert value of type [indi.shaw.coco.security.UserRealm] to required type [org.apache.shiro.authc.Authenticator] for property 'authenticator': no matching editors or conversion strategy found
+	at org.springframework.beans.BeanWrapperImpl.convertIfNecessary(BeanWrapperImpl.java:474)
+	at org.springframework.beans.BeanWrapperImpl.convertForProperty(BeanWrapperImpl.java:511)
+	at org.springframework.beans.BeanWrapperImpl.convertForProperty(BeanWrapperImpl.java:505)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.convertForProperty(AbstractAutowireCapableBeanFactory.java:1502)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1461)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	... 38 more
+Caused by: java.lang.IllegalStateException: Cannot convert value of type [indi.shaw.coco.security.UserRealm] to required type [org.apache.shiro.authc.Authenticator] for property 'authenticator': no matching editors or conversion strategy found
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:267)
+	at org.springframework.beans.BeanWrapperImpl.convertIfNecessary(BeanWrapperImpl.java:459)
+	... 44 more
+2019-05-04 03:52:27 [ main ] Root WebApplicationContext: initialization started
+2019-05-04 03:52:27 [ main ] Refreshing Root WebApplicationContext: startup date [Sat May 04 03:52:27 CST 2019]; root of context hierarchy
+2019-05-04 03:52:27 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-05-04 03:52:28 [ main ] Loading properties file from class path resource [wx-config.properties]
+2019-05-04 03:52:28 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-05-04 03:52:28 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-05-04 03:52:28 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-05-04 03:52:28 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\wx-config.properties]
+2019-05-04 03:52:28 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:28 [ main ] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:28 [ main ] Bean 'org.springframework.cache.annotation.AnnotationCacheOperationSource#0' of type [class org.springframework.cache.annotation.AnnotationCacheOperationSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:28 [ main ] Bean 'org.springframework.cache.config.internalCacheAdvisor' of type [class org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:28 [ main ] Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:28 [ main ] Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:28 [ main ] Bean 'sessionManager' of type [class org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:28 [ main ] Bean 'shiroCacheManager' of type [class org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:29 [ main ] MLog clients using log4j logging.
+2019-05-04 03:52:29 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-05-04 03:52:29 [ main ] Bean 'dataSource' of type [class com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:29 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-05-04 03:52:29 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-05-04 03:52:29 [ main ] HHH000206: hibernate.properties not found
+2019-05-04 03:52:29 [ main ] HHH000021: Bytecode provider name : javassist
+2019-05-04 03:52:29 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2zb477z1dxqb1h|73a00e09, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2zb477z1dxqb1h|73a00e09, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-05-04 03:52:29 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-05-04 03:52:29 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-05-04 03:52:30 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+2019-05-04 03:52:30 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+2019-05-04 03:52:30 [ main ] Unrecognized value for "hibernate.hbm2ddl.auto": none
+2019-05-04 03:52:30 [ main ] HHH020007: read-only cache configured for mutable entity [indi.shaw.coco.model.Code]
+2019-05-04 03:52:30 [ main ] Bean 'sessionFactory' of type [class org.springframework.orm.hibernate4.LocalSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:30 [ main ] Bean 'sessionFactory' of type [class org.hibernate.internal.SessionFactoryImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:30 [ main ] Bean 'userDao' of type [class indi.shaw.coco.dao.impl.UserDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:30 [ main ] Bean 'permissionDao' of type [class indi.shaw.coco.dao.impl.PermissionDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:30 [ main ] Bean 'userRealm' of type [class indi.shaw.coco.security.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:30 [ main ] Bean 'rememberMeCookie' of type [class org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:30 [ main ] Bean 'rememberMeManager' of type [class org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:30 [ main ] Creating a new instance of CacheManager using the diskStorePath "C:\Users\shaw\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@62a54948.
+The diskStore path for this CacheManager will be set to C:\Users\shaw\AppData\Local\Temp\\ehcache_auto_created_1556913150871.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.
+2019-05-04 03:52:30 [ main ] Cache with name 'indi.shaw.coco.security.UserRealm.authorizationCache' does not yet exist.  Creating now.
+2019-05-04 03:52:30 [ main ] Added EhCache named [indi.shaw.coco.security.UserRealm.authorizationCache]
+2019-05-04 03:52:30 [ main ] Bean 'securityManager' of type [class org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-04 03:52:30 [ main ] Initializing EhCache CacheManager
+2019-05-04 03:52:30 [ main ] Creating a new instance of CacheManager using the diskStorePath "C:\Users\shaw\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@6e02721d.
+The diskStore path for this CacheManager will be set to C:\Users\shaw\AppData\Local\Temp\\ehcache_auto_created_1556913150979.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.
+2019-05-04 03:52:31 [ main ] Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2zb477z1dxqb1h|73a00e09, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2zb477z1dxqb1h|73a00e09, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+2019-05-04 03:52:31 [ main ] Root WebApplicationContext: initialization completed in 3815 ms
+2019-05-04 03:52:31 [ main ] FrameworkServlet 'springmvc': initialization started
+2019-05-04 03:52:31 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Sat May 04 03:52:31 CST 2019]; parent: Root WebApplicationContext
+2019-05-04 03:52:31 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2019-05-04 03:52:31 [ main ] Overriding bean definition for bean 'mvcContentNegotiationManager': replacing [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-05-04 03:52:31 [ main ] Overriding bean definition for bean 'mvcUriComponentsContributor': replacing [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-05-04 03:52:31 [ main ] Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2019-05-04 03:52:31 [ main ] Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2019-05-04 03:52:31 [ main ] Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+2019-05-04 03:52:31 [ main ] Mapped URL path [/page/user/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#3'
+2019-05-04 03:52:31 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:31 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:31 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-05-04 03:52:31 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:31 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:31 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:31 [ main ] Mapped "{[/user/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.UserController.login(indi.shaw.coco.model.User,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:31 [ main ] Mapped "{[/user/isRelogin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.UserController.isRelogin(indi.shaw.coco.model.User,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:31 [ main ] Mapped "{[/user/dologin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String indi.shaw.coco.menu.UserController.dologin(java.lang.String,java.lang.String)
+2019-05-04 03:52:31 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:31 [ main ] Mapped "{[/wx/getUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:31 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:31 [ main ] Mapped "{[/wx/onLogin],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.onLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:31 [ main ] Mapped "{[/wx/receiveUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.receiveUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-05-04 03:52:32 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/user/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.UserController.login(indi.shaw.coco.model.User,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/user/isRelogin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.UserController.isRelogin(indi.shaw.coco.model.User,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/user/dologin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String indi.shaw.coco.menu.UserController.dologin(java.lang.String,java.lang.String)
+2019-05-04 03:52:32 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/wx/getUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/wx/onLogin],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.onLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] Mapped "{[/wx/receiveUserLocate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.receiveUserLocate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-04 03:52:32 [ main ] FrameworkServlet 'springmvc': initialization completed in 522 ms
+2019-05-04 03:52:39 [ qtp1836643189-18 ] Enabling session validation scheduler...

@@ -1,0 +1,3 @@
+2019-04-11 00:41:34 [ main ] HHH000389: Unsuccessful: alter table b_customer drop foreign key FK_lal705wfnd9mruptoac57w5ny
+2019-04-11 00:41:34 [ main ] Can't DROP 'FK_lal705wfnd9mruptoac57w5ny'; check that column/key exists
+2019-04-11 02:25:04 [ qtp1836643189-43 ] Cannot add or update a child row: a foreign key constraint fails (`coco_main`.`b_orders`, CONSTRAINT `FK_lebe5ci4tmj505eke0mphj94l` FOREIGN KEY (`plan_id`) REFERENCES `b_plan` (`id`))

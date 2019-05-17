@@ -1,0 +1,582 @@
+2019-04-14 02:22:58 [ main ] Root WebApplicationContext: initialization started
+2019-04-14 02:22:58 [ main ] Refreshing Root WebApplicationContext: startup date [Sun Apr 14 02:22:58 CST 2019]; root of context hierarchy
+2019-04-14 02:22:58 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-04-14 02:22:59 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-04-14 02:22:59 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-04-14 02:22:59 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-04-14 02:22:59 [ main ] MLog clients using log4j logging.
+2019-04-14 02:22:59 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-04-14 02:23:00 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-04-14 02:23:00 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-04-14 02:23:00 [ main ] HHH000206: hibernate.properties not found
+2019-04-14 02:23:00 [ main ] HHH000021: Bytecode provider name : javassist
+2019-04-14 02:23:00 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa26n42zb1rrc4dh|6594402a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa26n42zb1rrc4dh|6594402a, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-04-14 02:23:01 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-04-14 02:23:01 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-04-14 02:23:01 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+2019-04-14 02:23:01 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+2019-04-14 02:23:01 [ main ] Unrecognized value for "hibernate.hbm2ddl.auto": none
+2019-04-14 02:23:01 [ main ] HHH020007: read-only cache configured for mutable entity [indi.shaw.coco.model.Code]
+2019-04-14 02:23:02 [ main ] Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa26n42zb1rrc4dh|6594402a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa26n42zb1rrc4dh|6594402a, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+2019-04-14 02:23:02 [ main ] Root WebApplicationContext: initialization completed in 3650 ms
+2019-04-14 02:23:02 [ main ] FrameworkServlet 'springmvc': initialization started
+2019-04-14 02:23:02 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Sun Apr 14 02:23:02 CST 2019]; parent: Root WebApplicationContext
+2019-04-14 02:23:02 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2019-04-14 02:23:02 [ main ] Overriding bean definition for bean 'mvcContentNegotiationManager': replacing [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-14 02:23:02 [ main ] Overriding bean definition for bean 'mvcUriComponentsContributor': replacing [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-14 02:23:02 [ main ] Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2019-04-14 02:23:02 [ main ] Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2019-04-14 02:23:02 [ main ] Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+2019-04-14 02:23:02 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:02 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:02 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-14 02:23:02 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:02 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:02 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:02 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:02 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:03 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:03 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:03 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-14 02:23:03 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:03 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:03 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:03 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:03 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 02:23:03 [ main ] FrameworkServlet 'springmvc': initialization completed in 630 ms
+2019-04-14 02:23:07 [ qtp1836643189-27 ] Session Metrics {
+    417051 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    30394257 nanoseconds spent preparing 37 JDBC statements;
+    37992822 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    15674873 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    44169 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:23:18 [ qtp1836643189-44 ] Session Metrics {
+    23737 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    50779 nanoseconds spent preparing 1 JDBC statements;
+    790834 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    5409 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:23:19 [ qtp1836643189-21 ] Session Metrics {
+    23737 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1463586 nanoseconds spent preparing 37 JDBC statements;
+    20123921 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1760148 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:23:44 [ qtp1836643189-44 ] Session Metrics {
+    27643 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1981896 nanoseconds spent preparing 37 JDBC statements;
+    23190202 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    2061819 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    5709 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:24:14 [ qtp1836643189-47 ] Session Metrics {
+    44469 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1825950 nanoseconds spent preparing 37 JDBC statements;
+    19589088 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1584975 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    6009 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:24:33 [ qtp1836643189-47 ] Session Metrics {
+    297464 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2557894 nanoseconds spent preparing 37 JDBC statements;
+    19431040 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1210590 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:28:43 [ qtp1836643189-50 ] Session Metrics {
+    240074 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    3197594 nanoseconds spent preparing 37 JDBC statements;
+    23150845 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    2261030 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:29:33 [ qtp1836643189-50 ] Session Metrics {
+    260206 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    3534118 nanoseconds spent preparing 37 JDBC statements;
+    22873513 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1026102 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    6009 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:30:09 [ qtp1836643189-51 ] Session Metrics {
+    230761 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    3114364 nanoseconds spent preparing 37 JDBC statements;
+    21319487 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1037220 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    5709 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:31:13 [ qtp1836643189-54 ] Session Metrics {
+    172770 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2995977 nanoseconds spent preparing 37 JDBC statements;
+    20543972 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1741519 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    5709 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:33:15 [ qtp1836643189-56 ] Session Metrics {
+    254197 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2654648 nanoseconds spent preparing 37 JDBC statements;
+    18562679 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1063961 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:42:31 [ qtp1836643189-62 ] Session Metrics {
+    231061 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2714736 nanoseconds spent preparing 37 JDBC statements;
+    20835431 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1655885 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    6009 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:43:06 [ qtp1836643189-54 ] Session Metrics {
+    182385 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2048595 nanoseconds spent preparing 37 JDBC statements;
+    16837387 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    948882 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    4507 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:55:40 [ qtp1836643189-64 ] Session Metrics {
+    176375 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2938285 nanoseconds spent preparing 37 JDBC statements;
+    16768884 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    776412 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    7512 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:55:44 [ qtp1836643189-64 ] Session Metrics {
+    19831 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1315148 nanoseconds spent preparing 37 JDBC statements;
+    14707366 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    648713 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    4207 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:57:13 [ qtp1836643189-76 ] Session Metrics {
+    205521 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2458134 nanoseconds spent preparing 37 JDBC statements;
+    19823451 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1056750 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    6010 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:57:22 [ qtp1836643189-76 ] Session Metrics {
+    220244 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2228574 nanoseconds spent preparing 37 JDBC statements;
+    16359646 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    763793 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    5409 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:58:15 [ qtp1836643189-28 ] Session Metrics {
+    207624 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2198233 nanoseconds spent preparing 37 JDBC statements;
+    15798966 nanoseconds spent executing 37 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    536638 nanoseconds spent executing 1 flushes (flushing a total of 36 entities and 22 collections);
+    19230 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:58:24 [ qtp1836643189-72 ] Session Metrics {
+    27042 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    456412 nanoseconds spent preparing 1 JDBC statements;
+    1581369 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    839210 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:58:24 [ qtp1836643189-64 ] Session Metrics {
+    274930 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    956393 nanoseconds spent preparing 5 JDBC statements;
+    3792521 nanoseconds spent executing 5 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    17874007 nanoseconds spent executing 1 flushes (flushing a total of 5 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:58:24 [ qtp1836643189-76 ] Session Metrics {
+    249088 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    446196 nanoseconds spent preparing 1 JDBC statements;
+    1582271 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1279698 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 02:58:24 [ qtp1836643189-63 ] Session Metrics {
+    234666 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1572052 nanoseconds spent preparing 25 JDBC statements;
+    8252983 nanoseconds spent executing 25 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    28102577 nanoseconds spent executing 1 flushes (flushing a total of 25 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 03:00:59 [ qtp1836643189-63 ] Session Metrics {
+    343136 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    2692203 nanoseconds spent preparing 41 JDBC statements;
+    17533576 nanoseconds spent executing 41 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    707905 nanoseconds spent executing 1 flushes (flushing a total of 40 entities and 26 collections);
+    6310 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 03:01:52 [ main ] Root WebApplicationContext: initialization started
+2019-04-14 03:01:52 [ main ] Refreshing Root WebApplicationContext: startup date [Sun Apr 14 03:01:52 CST 2019]; root of context hierarchy
+2019-04-14 03:01:52 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-04-14 03:01:52 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-04-14 03:01:52 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-04-14 03:01:52 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-04-14 03:01:53 [ main ] MLog clients using log4j logging.
+2019-04-14 03:01:53 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-04-14 03:01:53 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-04-14 03:01:53 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-04-14 03:01:53 [ main ] HHH000206: hibernate.properties not found
+2019-04-14 03:01:53 [ main ] HHH000021: Bytecode provider name : javassist
+2019-04-14 03:01:53 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa26oi3h6dmhw7l|30865a90, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa26oi3h6dmhw7l|30865a90, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-04-14 03:01:54 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-04-14 03:01:54 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-04-14 03:01:54 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+2019-04-14 03:01:54 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+2019-04-14 03:01:54 [ main ] Unrecognized value for "hibernate.hbm2ddl.auto": none
+2019-04-14 03:01:54 [ main ] HHH020007: read-only cache configured for mutable entity [indi.shaw.coco.model.Code]
+2019-04-14 03:01:55 [ main ] Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa26oi3h6dmhw7l|30865a90, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa26oi3h6dmhw7l|30865a90, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+2019-04-14 03:01:55 [ main ] Root WebApplicationContext: initialization completed in 3193 ms
+2019-04-14 03:01:55 [ main ] FrameworkServlet 'springmvc': initialization started
+2019-04-14 03:01:55 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Sun Apr 14 03:01:55 CST 2019]; parent: Root WebApplicationContext
+2019-04-14 03:01:55 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2019-04-14 03:01:55 [ main ] Overriding bean definition for bean 'mvcContentNegotiationManager': replacing [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-14 03:01:55 [ main ] Overriding bean definition for bean 'mvcUriComponentsContributor': replacing [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-14 03:01:55 [ main ] Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2019-04-14 03:01:55 [ main ] Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2019-04-14 03:01:55 [ main ] Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+2019-04-14 03:01:55 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:55 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:55 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-14 03:01:55 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:55 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:55 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:55 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:55 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:56 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:56 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:56 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-14 03:01:56 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:56 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:56 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:56 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:56 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 03:01:56 [ main ] FrameworkServlet 'springmvc': initialization completed in 504 ms
+2019-04-14 03:01:59 [ qtp1836643189-18 ] Session Metrics {
+    33652 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    26166653 nanoseconds spent preparing 41 JDBC statements;
+    44735944 nanoseconds spent executing 41 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    13859439 nanoseconds spent executing 1 flushes (flushing a total of 40 entities and 26 collections);
+    45971 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 03:02:01 [ qtp1836643189-44 ] Session Metrics {
+    22836 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1878535 nanoseconds spent preparing 41 JDBC statements;
+    24117750 nanoseconds spent executing 41 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1801012 nanoseconds spent executing 1 flushes (flushing a total of 40 entities and 26 collections);
+    5108 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 03:02:08 [ qtp1836643189-45 ] Session Metrics {
+    28244 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    430272 nanoseconds spent preparing 1 JDBC statements;
+    523116 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    768600 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 03:02:08 [ qtp1836643189-23 ] Session Metrics {
+    267718 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1054345 nanoseconds spent preparing 5 JDBC statements;
+    2503508 nanoseconds spent executing 5 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    16219022 nanoseconds spent executing 1 flushes (flushing a total of 5 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 03:02:08 [ qtp1836643189-43 ] Session Metrics {
+    222348 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1654985 nanoseconds spent preparing 25 JDBC statements;
+    8936252 nanoseconds spent executing 25 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    36508200 nanoseconds spent executing 1 flushes (flushing a total of 25 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 03:02:08 [ qtp1836643189-20 ] Session Metrics {
+    240976 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    463023 nanoseconds spent preparing 1 JDBC statements;
+    523116 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1218703 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 1 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 10:44:50 [ main ] Root WebApplicationContext: initialization started
+2019-04-14 10:44:50 [ main ] Refreshing Root WebApplicationContext: startup date [Sun Apr 14 10:44:50 CST 2019]; root of context hierarchy
+2019-04-14 10:44:50 [ main ] Loading XML bean definitions from file [D:\my-program\coco\target\classes\applicationContext.xml]
+2019-04-14 10:44:51 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\jdbc.properties]
+2019-04-14 10:44:51 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\log4j.properties]
+2019-04-14 10:44:51 [ main ] Loading properties file from file [D:\my-program\coco\target\classes\redis.properties]
+2019-04-14 10:44:51 [ main ] MLog clients using log4j logging.
+2019-04-14 10:44:51 [ main ] Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+2019-04-14 10:44:51 [ main ] HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2019-04-14 10:44:51 [ main ] HHH000412: Hibernate Core {4.3.11.Final}
+2019-04-14 10:44:51 [ main ] HHH000206: hibernate.properties not found
+2019-04-14 10:44:51 [ main ] HHH000021: Bytecode provider name : javassist
+2019-04-14 10:44:51 [ main ] Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2751h5k1bropha|7a1234bf, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2751h5k1bropha|7a1234bf, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2019-04-14 10:44:52 [ main ] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2019-04-14 10:44:52 [ main ] HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-04-14 10:44:52 [ main ] HHH000399: Using default transaction strategy (direct JDBC transactions)
+2019-04-14 10:44:52 [ main ] HHH000397: Using ASTQueryTranslatorFactory
+2019-04-14 10:44:52 [ main ] Unrecognized value for "hibernate.hbm2ddl.auto": none
+2019-04-14 10:44:52 [ main ] HHH020007: read-only cache configured for mutable entity [indi.shaw.coco.model.Code]
+2019-04-14 10:44:52 [ main ] Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge0zaa2751h5k1bropha|7a1234bf, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0zaa2751h5k1bropha|7a1234bf, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/coco_main?serverTimezone=Hongkong&useUnicode=true&chaacterEncoding=utf8&useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 100, maxStatementsPerConnection -> 200, minPoolSize -> 5, numHelperThreads -> 10, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+2019-04-14 10:44:53 [ main ] Root WebApplicationContext: initialization completed in 2339 ms
+2019-04-14 10:44:53 [ main ] FrameworkServlet 'springmvc': initialization started
+2019-04-14 10:44:53 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Sun Apr 14 10:44:53 CST 2019]; parent: Root WebApplicationContext
+2019-04-14 10:44:53 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2019-04-14 10:44:53 [ main ] Overriding bean definition for bean 'mvcContentNegotiationManager': replacing [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.accept.ContentNegotiationManagerFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-14 10:44:53 [ main ] Overriding bean definition for bean 'mvcUriComponentsContributor': replacing [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser$CompositeUriComponentsContributorFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-04-14 10:44:53 [ main ] Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2019-04-14 10:44:53 [ main ] Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2019-04-14 10:44:53 [ main ] Mapped URL path [/fonts/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+2019-04-14 10:44:53 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-14 10:44:53 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/index],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final java.lang.String indi.shaw.coco.menu.MenuController.index(javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void indi.shaw.coco.menu.MenuController.create()
+2019-04-14 10:44:53 [ main ] Mapped "{[/savePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.savePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/getPlanByDate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/deletePlan],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.MenuController.deletePlan(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/wx/getPlanByDate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.getPlanByDate(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] Mapped "{[/wx/sendSms2Customer],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public final void indi.shaw.coco.menu.WXAppoController.sendSms2Customer(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-14 10:44:53 [ main ] FrameworkServlet 'springmvc': initialization completed in 436 ms
+2019-04-14 10:50:08 [ qtp109961541-45 ] Session Metrics {
+    192000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    22459168 nanoseconds spent preparing 45 JDBC statements;
+    79258648 nanoseconds spent executing 45 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    11037132 nanoseconds spent executing 1 flushes (flushing a total of 44 entities and 30 collections);
+    83230 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 10:50:22 [ qtp109961541-46 ] Session Metrics {
+    68807 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    3222829 nanoseconds spent preparing 45 JDBC statements;
+    41592138 nanoseconds spent executing 45 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1653181 nanoseconds spent executing 1 flushes (flushing a total of 44 entities and 30 collections);
+    14422 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 10:50:39 [ qtp109961541-22 ] Session Metrics {
+    58591 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    123793 nanoseconds spent preparing 1 JDBC statements;
+    1409200 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    14122 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 14:06:53 [ qtp109961541-20 ] Session Metrics {
+    498478 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    5850732 nanoseconds spent preparing 45 JDBC statements;
+    37357330 nanoseconds spent executing 45 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    2844241 nanoseconds spent executing 1 flushes (flushing a total of 44 entities and 30 collections);
+    30046 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 14:08:31 [ qtp109961541-45 ] Session Metrics {
+    457915 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    4718565 nanoseconds spent preparing 45 JDBC statements;
+    39140908 nanoseconds spent executing 45 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1125558 nanoseconds spent executing 1 flushes (flushing a total of 44 entities and 30 collections);
+    14122 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 16:36:35 [ qtp109961541-21 ] Session Metrics {
+    253296 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    3652805 nanoseconds spent preparing 45 JDBC statements;
+    25537174 nanoseconds spent executing 45 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1654984 nanoseconds spent executing 1 flushes (flushing a total of 44 entities and 30 collections);
+    10517 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 16:37:13 [ qtp109961541-21 ] Session Metrics {
+    754778 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    5875071 nanoseconds spent preparing 45 JDBC statements;
+    45453166 nanoseconds spent executing 45 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1501444 nanoseconds spent executing 1 flushes (flushing a total of 44 entities and 30 collections);
+    19831 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-04-14 16:37:49 [ qtp109961541-392 ] Session Metrics {
+    588919 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    5166569 nanoseconds spent preparing 45 JDBC statements;
+    48511340 nanoseconds spent executing 45 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    1768261 nanoseconds spent executing 1 flushes (flushing a total of 44 entities and 30 collections);
+    14422 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}

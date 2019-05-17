@@ -1,0 +1,62 @@
+<script>
+function ExpandCollapse(el) {
+	var tr = el.parentElement.parentElement;
+	var tbl = tr.parentElement.parentElement;
+	var sDisplay = (el.src.indexOf("minus") == -1) ? "" : "none";
+	var sDisplayReverse = (el.src.indexOf("minus") == -1) ? "none" : "";
+	el.src = "http://10.1.150.132:9300/p2pd/samples/image/PropertyGrou_"
+			+ (el.src.indexOf("minus") == -1 ? "minus" : "plus") + ".png";
+	for (var i = tr.rowIndex + 1; i < tbl.rows.length; i++) {
+		var trCurrent = tbl.rows(i);
+		if (trCurrent.cells(0).firstChild
+				&& trCurrent.cells(0).getElementsByTagName("IMG").length) {
+			if (tr.cells(0).style.paddingLeft == ""
+					&& trCurrent.cells(0).style.paddingLeft == "20px") {
+				if (el.src.indexOf("minus") == -1) {
+					trCurrent.cells(0).getElementsByTagName("IMG").item(0).src = "http://10.1.150.132:9300/p2pd/samples/image/PropertyGrou_plus.png";
+				}
+			} else {
+				break;
+			}
+		} else if (trCurrent.cells(0).type == 'summary') {
+		} else {
+			trCurrent.style.display = sDisplay;
+		}
+	}
+}
+
+function StartHidden(el) {
+	var tbl = el;
+	for (var i = 0; i < tbl.rows.length; i++) {
+		var trCurrent = tbl.rows(i);
+		if (trCurrent.cells(0).style.paddingLeft.indexOf("px") > -1)
+
+		{
+			trCurrent.style.display = "none";
+		}
+	}
+}
+
+(function hiddeTables(){
+	var tables = document.getElementsByTagName('table');
+	for (i = 0; i < tables.length; i++) {
+		if (tables[i].LID != null || tables[i] != undefined) {
+			StartHidden(tables[i]);
+		}
+	}
+}());
+
+window.onload = function() {
+	hiddeTables();
+}
+
+function StartHidden2(el) {
+	var tbl = el.parentElement.parentElement;
+	for (var i = 0; i < tbl.rows.length; i++) {
+		var trCurrent = tbl.rows(i);
+	if (trCurrent.cells(0).style.paddingLeft.indexOf("px") > -1) {
+				trCurrent.style.display = "none";
+			}
+		}
+	}
+</script>

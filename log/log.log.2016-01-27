@@ -1,0 +1,15 @@
+2016-01-27 13:26:33 [ main ] Root WebApplicationContext: initialization started
+2016-01-27 13:26:33 [ main ] Refreshing Root WebApplicationContext: startup date [Wed Jan 27 13:26:33 CST 2016]; root of context hierarchy
+2016-01-27 13:26:33 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-27 13:26:34 [ main ] Root WebApplicationContext: initialization completed in 1062 ms
+2016-01-27 13:26:34 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-01-27 13:26:34 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Wed Jan 27 13:26:34 CST 2016]; parent: Root WebApplicationContext
+2016-01-27 13:26:34 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-01-27 13:26:35 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-01-27 13:26:35 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-01-27 13:26:35 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-01-27 13:26:35 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-01-27 13:26:35 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-01-27 13:26:35 [ main ] Mapped "{[/vote/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.get(javax.servlet.http.HttpServletRequest)
+2016-01-27 13:26:35 [ main ] Mapped "{[/vote/stat],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.stat(javax.servlet.http.HttpServletRequest)
+2016-01-27 13:26:35 [ main ] FrameworkServlet 'springmvc': initialization completed in 1077 ms

@@ -1,0 +1,1357 @@
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript" src="locales/bootstrap-datepicker.zh-CN.min.js"></script>
+	<script type="text/javascript" src="js/bubbly-bg.js"></script>
+	<!-- <script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=PCSzLCPheaiYAfGPVXmscRubjkPZBMX8&s=1"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/library/TextIconOverlay/1.2/src/TextIconOverlay.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/library/MarkerClusterer/1.2/src/MarkerClusterer.js"></script> -->
+	<script type="text/javascript" src="js/FileSaver.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<script type="text/javascript" src="js/mapControl.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<style type="text/css">
+	body{background: url(img/banner1.jpeg) no-repeat fixed bottom;}
+	#allmap {height: 600px;overflow: hidden;margin:0;font-family:"微软雅黑"; margin-top: 60px;}
+	.schedulePanel, .planPanel{overflow: auto; height: 400px; background-color: #f8f8f8;}
+	.main{float: left;}
+	#scheduleList .scheduleTemplate{display: none;}
+	.planList .planTemplate{display: none;}
+	.detailModal, .search-bar-template, .result-template, .plan-table-template{display : none;}
+	.schedule-header {background: url(img/taobao.png) no-repeat right top;}
+	.date-group-picker{margin: 0px}
+	.rowNo {padding: 0px 2px}
+	.plan-table{padding: 0px 30px;}
+	#plan_tables{min-height: 400px}
+	</style>
+	<script type="text/javascript">
+	//# sourceURL= index_final.js
+	function initialize(){
+		console.log("baidu map init started-----");
+			// 百度地图API功能
+				map = new BMap.Map("allmap");
+				map.enableDragging(); 
+				map.enableScrollWheelZoom(true);
+				map.setCurrentCity("成都");
+				map.centerAndZoom("成都", 14);
+				
+				startPoint = {point : new BMap.Point(104.029554, 30.659327)
+				, title : "四川省成都市二环路西一段116号浣花小区12幢"};
+				mapControl = new CoCo.MapControl();
+				
+				//marker扩展 与计划条目的序号(NO)相对应
+				BMap.Marker.prototype.getNo = function() {
+					return this.no;
+				}
+				BMap.Marker.prototype.setNo = function(no) {
+					this.no = no;
+				}
+				BMap.Polyline.finish = function(){
+					this.a2 = 1;
+				}
+				try {
+					var isFileSaverSupported = !!new Blob;
+				} catch (e) {
+					console.error("don't surport isFileSaver");
+				}
+				
+				//百度地图查询
+				var searchOptions = {
+					renderOptions : {
+						map: map
+						//,panel: "r-result"
+					}
+					,onSearchComplete: function(results){
+						console.log("location search !");
+						$("#r-result .reusult-item").remove();
+						// 判断状态是否正确
+						if (local.getStatus() == BMAP_STATUS_SUCCESS){
+							for(var i = 0; i < results.getNumPois(); i++){
+								if(i > 9)//百度地图标注未实现翻页功能，每页只能显示10条，故只显示第一页
+									break;
+								var localPoi = results.getPoi(i);
+								var li = $("#r-result .result-template").clone();
+								li.css("cursor", "pointer");
+								li.removeClass("result-template");
+								li.addClass("reusult-item");
+								li.find("span").css("background-position", "-23px -"+i*25+"px");
+								li.find(".reusult-detail>div:eq(0)>span").html(localPoi.title);
+								li.find(".reusult-detail>div:eq(1)>span").html(localPoi.address);
+								li.find('input[name="title"]').val(localPoi.title);
+								li.find('input[name="address"]').val(localPoi.address);
+								li.find('input[name="endPoint-lng"]').val(localPoi.point.lng);
+								li.find('input[name="endPoint-lat"]').val(localPoi.point.lat);
+								$("#r-result ul").append(li);
+								li.on("click", function(){
+									map.panTo(new BMap.Point($(this).find('input[name="endPoint-lng"]').val(), $(this).find('input[name="endPoint-lat"]').val()));
+									$('.search-bar input[name="search"]').val($(this).find('input[name="title"]').val());
+									$('.search-bar input[name="endPoint-lng"]').val($(this).find('input[name="endPoint-lng"]').val());
+									$('.search-bar input[name="endPoint-lat"]').val($(this).find('input[name="endPoint-lat"]').val());
+									$('.search-bar input[name="search"]').hide();
+									$('.search-bar input[name="search"]').fadeIn("slow");
+								});
+							}
+						}
+					}
+				}
+				local = new BMap.LocalSearch(map, searchOptions);
+				iconSize = new BMap.Size("32", "32");
+				scheduleIcon = new BMap.Icon("img/markerIconx32.png", iconSize);
+				planIcon = new BMap.Icon("img/planMarkerIconx32.png", iconSize);
+				function G(id) {
+					return document.getElementById(id);
+				}
+
+				var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
+					{"input" : "search"
+					,"location" : map
+				});
+
+				ac.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
+					var str = "";
+					var _value = e.fromitem.value;
+					var value = "";
+					if (e.fromitem.index > -1) {
+					value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+					}    
+					str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+
+					value = "";
+					if (e.toitem.index > -1) {
+					_value = e.toitem.value;
+					value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+					}    
+					str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+					G("searchResultPanel").innerHTML = str;
+				});
+
+				var myValue;
+				ac.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+				var _value = e.item.value;
+					myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+					G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;			
+					//setPlace();
+				});
+				initPlanPanel();
+				console.log("baidu map init completed*****");
+		 }
+		function loadScript() {
+		  var script = document.createElement("script");
+		  script.src = "http://api.map.baidu.com/api?v=3.0&ak=PCSzLCPheaiYAfGPVXmscRubjkPZBMX8&callback=initialize";
+		  document.body.appendChild(script);
+		  
+		//初始化当天日期
+			currentDay = new Date();
+			currentDayFmt = fmtDate(currentDay);
+			//$('[data-toggle="popover"]').popover({trigger : "click"});		
+			$('.date').datepicker({language: 'zh-CN'});
+			$('.date').datepicker('setDate', currentDay);
+			
+			var clickNavBoard = function(){
+				$("#nav-board a").on("click", function(e){
+					// e.preventDefault()
+					// 		$(this).parent().tab('show');
+				});
+			}();		
+
+			drawInterval = self.setInterval(function(){
+				for(key in animationMap){
+					if(animationMap[key].isActive == false)
+						return true;
+					animationMap[key].exec();
+				}
+			}, 200);
+			
+			//获取用户位置
+			getLocate = function(){
+				
+			}
+			
+			$(".map-panel .btn-search").on("click", function(){
+				local.search($('.map-panel input[name="search"]').val());
+			});
+			$(".map-panel .btn-clear").on("click", function(){
+				$('.map-panel input[name="search"]').val("");
+				local.search("");
+			});
+			$(".map-panel .btn-locate").on("click", function(){
+				$('.map-panel input[name="search"]').val("");
+				coco.getLocate();
+			});
+
+			// $(".map-panel .btn-search").on("mouseenter", function(event){
+			// 	console.log("enter");
+			// 	event.originalEvent.stopPropagation();
+			// 	$(".map-panel .search-bar").find("*").removeClass("hidden");
+			// });
+
+			// $(".map-panel1").on("mouseleave", function(event){
+			// 	console.log("leave");
+			// 	event.originalEvent.stopPropagation();
+			// 	$(".map-panel .btn-clear").not("").addClass("hidden");
+			// 	$("#search").addClass("hidden");			
+			// });
+
+			
+			//查询未计划列表地址
+			$("#searchSchedule").on("click", function(){
+				console.log("start search schedule list");
+				var searchAggregate = new Aggregate(schedules);
+				var searchAddressPoi = new CoCo.SearchAddressPoi(searchAggregate, {map : map, listSelector : "scheduleList", savePolicy : SCHEDULE_LIST});
+				searchAddressPoi.search();
+			});
+
+			//查询计划列表地址
+			$("#searchPlan").on("click", function(){
+				console.debug("start search plan list");
+				var searchAggregate = new Aggregate(currentPlan.scheduleList);
+				var searchAddressPoi = new CoCo.SearchAddressPoi(searchAggregate, {map : map, listSelector : "planList", savePolicy : PLAN_LIST});
+				searchAddressPoi.search();
+				var searchPlan_a = new CoCo.Animation(
+				"searchPlan"
+				,function(){
+				var nowProcess = parseInt($(".search-progress").data("process-index"));
+				if(nowProcess == 8)
+					nowProcess = -2;
+				$(".search-progress").data("process-index", parseInt(nowProcess+2));
+				$(".search-progress img").attr("src", "img/progress"+parseInt(nowProcess+2)+".png");
+				}, function(){
+				$(".search-progress").data("process-index", 0);
+				$(".search-progress img").attr("src", "img/progress0.png");
+				});
+				animationMap["searchPlan"] = searchPlan_a;
+			});
+			var isNew = true;
+			
+			createMarker = function(newPlan, planData, list_name){
+				if(coco.isEmpty(planData) || coco.isEmpty(planData.endPointLng))
+					return null;
+				var point = new BMap.Point(planData.endPointLng, planData.endPointLat);
+				var newMarker = new BMap.Marker(point);  // 创建标注
+				if(list_name == SCHEDULE_LIST){
+					newMarker.c_type = C_TYPE_SCHEDULE;
+					newMarker.setIcon(scheduleIcon);
+					newMarker.disableMassClear();
+				}
+				else if(list_name == PLAN_LIST){
+					newMarker.c_type = C_TYPE_PLAN;
+					newMarker.setIcon(planIcon);
+					newMarker.enableMassClear();
+					if(markers["p"+planData.no]){
+						if(markers["p"+planData.no].getPosition().equals(point)){
+							isNew = false;
+							//markers[planData.no].setIcon(planIcon);
+						}
+					}
+				}else{
+					return null;
+				}
+				newMarker.setNo(planData.no);
+				var opts = {
+					width : 250,// 信息窗口宽度
+					height: 80,// 信息窗口高度
+					title : planData.title// 信息窗口标题
+				}
+				var infoWindow = new BMap.InfoWindow(planData.name + planData.telephone +"<br/>" + planData.address, opts);  // 创建信息窗口对象 
+				newMarker.addEventListener("click", function(){
+					console.log("mapControl.isPlanning : " + mapControl.isPlanning);
+					if(newPlan && list_name == PLAN_LIST && mapControl.isPlanning){
+						mapControl.pickPoint(point, newPlan);
+					}else{
+						map.openInfoWindow(infoWindow,point); //开启信息窗口
+					}
+				});
+				//newMarker.enableDragging();
+				newMarker.addEventListener("dragstart", function(){
+					console.log("dragstart");
+				});		
+				newMarker.addEventListener("dragging", function(){
+					console.log("dragging");
+				});
+				if(isNew){
+					map.addOverlay(newMarker);
+				}
+				return newMarker;
+			}
+
+			//加入计划
+			var clickJoinPlan = function(schedule_tg){
+				schedule_tg.each(function(index, elem){
+					//新增计划
+					var schedule = $(elem);
+					var no = schedule.find("input[name='no']").val();
+					var title = schedule.find("input[name='title']").val();
+					var name = schedule.find("input[name='name']").val();
+					var telephone = schedule.find("input[name='telephone']").val();
+					var address = schedule.find("input[name='address']").val();
+					var distance = schedule.find("input[name='distance']").val();
+					var duration = schedule.find("input[name='duration']").val();
+					var remarks = schedule.find("input[name='remarks']").val();				
+					var endPointLng = schedule.find("input[name='endPoint-lng']").val();
+					var endPointLat = schedule.find("input[name='endPoint-lat']").val();
+					var status = schedule.find("input[name='status']").val();
+					var scheduleJSON = {"no" : no, "title" : title, "name" : name, "telephone" : telephone, "address" : address, "distance" : distance, "duration" : duration, "remarks" : remarks, "endPointLng" : endPointLng, "endPointLat" : endPointLat, "status" : status};
+					var newPlan = createPlan(scheduleJSON);
+					schedule.remove();
+					orderScheduleNumber("scheduleList", schedules);
+					$(".planList").append(newPlan);
+					if(currentPlan.scheduleList)
+						currentPlan.scheduleList.push(scheduleJSON);
+					else
+						currentPlan.scheduleList = [scheduleJSON];
+					schedules.splice(parseInt($(this).parents(".dropdown").find("button").text())-1, 1);
+					console.log(schedules);
+					orderScheduleNumber("planList", currentPlan.scheduleList);
+				});
+			}
+			//恢复计划:在计划中移除并回到未计划列表
+			restorePlan = function(plan){
+					//新增计划
+					var plan = plan.parents("tr");
+					var no = plan.find("input[name='no']").val();
+					var title = plan.find("input[name='title']").val();
+					var name = plan.find("input[name='name']").val();
+					var telephone = plan.find("input[name='telephone']").val();
+					var address = plan.find("input[name='address']").val();
+					var distance = plan.find("input[name='distance']").val();
+					var duration = plan.find("input[name='duration']").val();
+					var remarks = plan.find("input[name='remarks']").val();
+					var endPointLng = plan.find("input[name='endPoint-lng']").val();
+					var endPointLat = plan.find("input[name='endPoint-lat']").val();
+					var status = plan.find("input[name='status']").val();
+					var planJSON = {"no" : no, "title" : title, "name" : name, "telephone" : telephone, "address" : address, "distance" : distance, "duration" : duration, "remarks" : remarks, "endPointLng" : endPointLng, "endPointLat" : endPointLat, "status" : status};
+					var resSchedule = createSchedule(planJSON);
+					$("#scheduleList").append(resSchedule);
+					plan.remove();
+			}
+
+			var clickDrivingRoute = function(){
+				if(searchAggregate.size < 1)
+					return;
+				searchIterator= searchAggregate.createIterator();
+				while(!searchIterator.isDone()){
+					var previousItem = searchIterator.currentItem();
+					var currentItem = searchIterator.next();
+				}
+			}
+
+			var getPlanDistance = function(pointA, pointB){
+				return parseInt(map.getDistance(pointA,pointB).toFixed(0));
+			}
+			var planSwap = function(planList, a, b){
+				var s = planList[a];
+				planList[a] = planList[b];
+				planList[b] = s;
+			}
+			var planPerm = function(planList, k, m, sub){
+				if(k > m){
+					var distance = 0;
+					var sub1 = {};
+					sub1.list = [];
+					for(var i = 0;i <=m;i++ ){
+						sub1.list.push(planList[i]);
+						if(i == 0||i > m){
+							distance= distance + getPlanDistance(startPoint, new BMap.Point(planList[i].endPointLng, planList[i].endPointLat));
+						}else{
+							distance = distance + getPlanDistance(new BMap.Point(planList[i].endPointLng, planList[i].endPointLat)
+								, new BMap.Point(planList[i-1].endPointLng, planList[i-1].endPointLat));
+						}
+					}
+					sub.list.push(sub1);
+					sub1.distance = distance;
+					console.debug(++sub.count+"----------"+distance);
+				}else{
+					for(var i = k;i <=m;i++ ){
+						planSwap(planList, k, i);
+						planPerm(planList, k+1, m, sub);
+						planSwap(planList, k, i);
+					}
+				}
+			}
+			var planMultDrivingRoute = function(){
+				leastDistanceSub = {};
+				leastDistanceSub.list = [];
+				leastDistanceSub.count = 0;
+				planPerm(currentPlan.scheduleList.slice(0), 0, currentPlan.scheduleList.length-1, leastDistanceSub);
+				return leastDistanceSub;
+			}
+
+			$(".planPanel").on("dragover", function(event){
+				event.originalEvent.preventDefault();
+			});
+
+			$(".planPanel").on("drop", function(event){
+				event.originalEvent.stopPropagation();
+				var startNo =event.originalEvent.dataTransfer.getData("startNo");
+				//var endNo = $(event.originalEvent.currentTarget).find(".rowNo button").text();
+				var startList = event.originalEvent.dataTransfer.getData("startList");
+				var endList = $(event.originalEvent.currentTarget).find("tbody").attr("id");
+				if(startList == "scheduleList" && endList == "planList"){
+					event.originalEvent.dataTransfer.dropEffect = 'none'; 
+					console.log("joinPlan");
+					clickJoinPlan($("#scheduleList tr:eq("+startNo+")"));
+					return;
+				}
+			});
+
+			$("#planMultDrivingRoute").on("click", function(){
+				console.debug(planMultDrivingRoute());
+			});
+
+			$("#joinPlan").on("click", function(){
+				clickJoinPlan($("#scheduleList tr input[name='isSelect'][value='1']").parents("tr"));
+			});
+
+			$("#funcPanel").find("#drivingRoute").on("click", function(){
+				clickDrivingRoute();
+			});
+
+			//新增条目
+			createSchedule = function(scheduleData, rowNo){
+				var newSchedule = $("#scheduleList .scheduleTemplate").clone();
+				//点击清除
+				newSchedule.find(".btn-del-schedule").on("click", function(event){
+					console.debug("delete tr");
+					newSchedule.remove();
+					delete markers["s"+scheduleData.no];
+					return false;//stopPropagation
+				});
+				newSchedule.removeClass("scheduleTemplate");
+				//计算路程
+				$(newSchedule).find("input[name='address']").on("change", function(){
+					console.debug("calcRoute");
+					var end = $(this).val();
+					searchingSchedule = $(this).parents("tr");
+				});
+				var local_bar = $(".schedulePanel .search-bar-template").clone();
+				local_bar.removeClass("search-bar-template");
+				local_bar.css("width", "180px");
+				local_bar.addClass("search-bar");
+				local_bar.find(".btn-search").on("click", function(){
+					local.search(local_bar.find('input[name="search"]').val());
+				});
+				local_bar.find(".confirm").on("click", function(){
+					if(local_bar.find("input[name='endPoint-lng']").val() == "")
+						return false;
+					$(newSchedule).find("input[name='endPoint-lng']").val(local_bar.find("input[name='endPoint-lng']").val());
+					$(newSchedule).find("input[name='endPoint-lat']").val(local_bar.find("input[name='endPoint-lat']").val());
+					if(markers["s"+scheduleData.no])
+						markers["s"+scheduleData.no].setPosition(new BMap.Point(local_bar.find("input[name='endPoint-lng']").val(), local_bar.find("input[name='endPoint-lat']").val()));
+					else
+						markers["s"+scheduleData.no] = new BMap.Point(local_bar.find("input[name='endPoint-lng']").val(), local_bar.find("input[name='endPoint-lat']").val());
+					$(newSchedule).find(".location").popover("hide");
+					//markers["p"+scheduleData.no] = relocaMarker;
+				});		
+				local_bar.find(".cancel").on("click", function(){
+					$(newSchedule).find(".location").popover("hide");
+				});
+				$(newSchedule).find(".location").popover({html : true, title : "定位",
+					content : local_bar,
+					trigger : "manual"
+				});
+				$(newSchedule).find(".location").on("click", function(){
+					$(newSchedule).find(".location").popover("toggle");
+				});
+				$(newSchedule).find(".location").on("show.bs.popover", function(){
+					$(".schedulePanel .location").each(function(index, ele){
+						if(rowNo != index){
+							$(this).popover("hide");
+							local_bar.find("input").val("");
+						}
+					});
+				});
+				//填充数据
+				if(scheduleData == null)
+					return newSchedule;
+				newSchedule.find(".rowNo button").text(rowNo);
+				newSchedule.find("input[name='id']").val(scheduleData.id);
+				newSchedule.find("input[name='no']").val(scheduleData.no);
+				newSchedule.find("input[name='title']").val(scheduleData.title);
+				newSchedule.find("input[name='name']").val(scheduleData.name);
+				newSchedule.find("input[name='telephone']").val(scheduleData.telephone);
+				newSchedule.find("input[name='address-id']").val(scheduleData.addressid);
+				newSchedule.find("input[name='address']").val(scheduleData.address);
+				newSchedule.find("input[name='distance']").val(scheduleData.distance);
+				newSchedule.find("input[name='duration']").val(scheduleData.duration);
+				newSchedule.find("input[name='remarks']").val(scheduleData.remarks);
+				newSchedule.find("input[name='endPoint-lng']").val(scheduleData.endPointLng);
+				newSchedule.find("input[name='endPoint-lat']").val(scheduleData.endPointLat);
+				if(coco.isEmpty(scheduleData.endPointLng)){
+					newSchedule.find(".location").removeClass("btn-success");
+					newSchedule.find(".location").addClass("btn-danger");
+				}else if(coco.isEmpty(scheduleData.distance)){
+					newSchedule.find(".location").removeClass("btn-danger");
+					newSchedule.find(".location").addClass("btn-warning");
+				}
+				var marker = createMarker(newSchedule, scheduleData, SCHEDULE_LIST);
+				if(marker)
+						markers["s"+scheduleData.no] = marker;
+				return newSchedule;
+			}
+
+			createPlan = function(planData, rowNo){
+				var newPlan = $(".planList:eq(0) .planTemplate").clone();
+				CoCo.extends_plan(rowNo, newPlan, planData);
+				var marker = createMarker(newPlan, planData, PLAN_LIST);
+				if(marker)
+						markers["p"+planData.no] = marker;
+				return newPlan;
+			}
+			
+			var initSchedulesList = function(){
+				schedules = coco.initSchedules();
+				var searchAggregate = new Aggregate(schedules);
+				for(i = 0 ; i < schedules.length; i++){
+					var newSchedule = createSchedule(schedules[i], parseInt(i)+1);				
+					CoCo.dragScheduleBind(newSchedule, searchAggregate);
+					$("#scheduleList").append(newSchedule);
+				}
+				$("[data-toggle='tooltip']").each(function(index, element){
+					$(element).tooltip({title : $(element).val()});
+				});
+				//点击条目
+				$("#scheduleList").find(".btn-select-schedule").on("click", function(event){
+					var tr = $(this).parents("tr");
+					var checkBox = tr.find(".btn-select-schedule .glyphicon");
+					var no = tr.find('input[name="no"]').val();
+					if(tr.find("input[name='isSelect']").val() == 0){
+						tr.find("input[name='isSelect']").val(1);
+						checkBox.removeClass("glyphicon-unchecked");
+						checkBox.addClass("glyphicon-check");
+						tr.addClass("btn-primary");
+						if(markers["s"+no])
+							markers["s"+no].setAnimation(BMAP_ANIMATION_BOUNCE);
+					}else{
+						tr.find("input[name='isSelect']").val(0);
+						checkBox.removeClass("glyphicon-check");
+						checkBox.addClass("glyphicon-unchecked");
+						tr.removeClass("btn-primary");
+						if(markers["s"+no])
+							markers["s"+no].setAnimation(null);
+					}
+				});
+			};
+			initSchedulesList();
+
+			//编号
+			orderScheduleNumber = function(list_name, scheduleList){
+				console.log("orderScheduleNumber");
+				var indexList = "";
+				for(var i = 1; i <= scheduleList.length; i++){
+					$("#"+list_name+" tr:eq("+i+") .rowNo button").text(i);
+					var indexList = indexList + "<li><a>"+i+"</a></li>";
+				}
+				$("#"+list_name+" .dropdown-menu li").remove();
+				$("#"+list_name+" .dropdown-menu").append(indexList);
+				$("#"+list_name+" .dropdown-menu li a").on("click", function(){
+					var rowNoBtn = $(this).parents(".dropdown").find("button");
+					if(rowNoBtn.text() == $(this).text())
+						return;
+					console.log(rowNoBtn.text()+"__"+$(this).text());
+					delete searchAggregate.get(parseInt(rowNoBtn.text())-1).distance;
+					if(parseInt(rowNoBtn.text()) < searchAggregate.size()){
+						delete searchAggregate.get(parseInt(rowNoBtn.text())).distance;
+					}
+					delete searchAggregate.get(parseInt($(this).text())-1).distance;
+					if(parseInt($(this).text()) < searchAggregate.size()){
+						delete searchAggregate.get(parseInt($(this).text())).distance;
+					}
+					$(this).parents("tr").find("input[name='distance']").val("");
+					$(this).parents("tr").find("input[name='duration']").val("");
+					$(this).parents("tr").find("input[name='endPoint-lng']").val("");
+					$(this).parents("tr").find("input[name='endPoint-lat']").val("");
+					searchAggregate.moveTo(parseInt(rowNoBtn.text())-1, parseInt($(this).text())-1);
+
+					if(parseInt(rowNoBtn.text()) - parseInt($(this).text()) < 0)
+						$("#"+list_name+" tr:eq("+rowNoBtn.text()+")").insertAfter($("#"+list_name+" tr:eq("+$(this).text()+")"));
+					else
+						$("#"+list_name+" tr:eq("+rowNoBtn.text()+")").insertBefore($("#"+list_name+" tr:eq("+$(this).text()+")"));
+					rowNoBtn.text($(this).text());
+					$(this).parents("tr").fadeOut("slow", function(){
+						$(this).fadeIn("slow");
+						$("#"+list_name+" tr:gt(0)").each(function(index, element){
+							$(element).find(".dropdown-toggle").text(parseInt(index+1));
+						});
+					});				
+					searchAddressPoi.search();
+				});
+			}
+
+			var initPlansList = function(target, data){
+				console.log("initPlansList---------");
+				$("#"+target+" tr").not(".planTemplate").remove();
+				//currentPlan[target] = coco.initPlans(target);
+				var searchAggregate = new Aggregate(data.scheduleList);
+				var searchAddressPoi = new CoCo.SearchAddressPoi(searchAggregate, {map : map, listSelector : target, savePolicy : PLAN_LIST});
+				if(!("scheduleList" in data)){
+					console.log("empty scheduleList");
+					return;
+				}
+				for(i = 0 ; i < data.scheduleList.length; i++){
+					var newPlan = createPlan(data.scheduleList[i], parseInt(i)+1);
+					console.debug($("#"+target));
+					$("#"+target).append(newPlan);
+					CoCo.dragScheduleBind(newPlan, searchAggregate);
+				}
+				$("#"+target+" input[name='planDate']").val(currentDayFmt);
+				$("#"+target).data("plan-name" , data.operatorName);
+				//快捷键复制
+				// $(".planList").on("keyup", function(event){
+				// 	console.log(event.keyCode);
+				// 	console.log(event.ctrlKey);
+				// 	if(event.ctrlKey && event.keyCode == 86){
+				// 		event.originalEvent.preventDefault();
+				// 		console.log("yes paste");
+				// 		$.each(copySchedules, function(index, ele){
+				// 			$(".planList").append(ele.element);
+				// 			currentPlan.scheduleList.push(ele.data);
+				// 		});
+				// 		orderScheduleNumber("planList", currentPlan.scheduleList);
+				// 	}
+				// });
+				// var pois = [];
+				// pois.push(searchAddressPoi.startPoint); //起始点
+				// for(key in markers){
+				// 	var planMarkerReg = /^p\d{1,2}$/;
+				// 	if(planMarkerReg.test(key)){
+				// 		pois.push(markers[key].getPosition());
+				// 	}
+				// }			
+				// mapControl.drawPlanRoute(pois);
+				$("[data-toggle='tooltip']").each(function(index, element){
+					$(element).tooltip({title : $(element).val()});
+				});
+				orderScheduleNumber(target, data.scheduleList);
+				if(searchAggregate.size() > 0){
+					searchAddressPoi.search();
+					var searchPlan_a = new CoCo.Animation(
+					"searchPlan"
+					,function(){
+					var nowProcess = parseInt($(".search-progress").data("process-index"));
+					if(nowProcess == 8)
+						nowProcess = -2;
+					$(".search-progress").data("process-index", parseInt(nowProcess+2));
+					$(".search-progress img").attr("src", "img/progress"+parseInt(nowProcess+2)+".png");
+					}, function(){
+					$(".search-progress").data("process-index", 0);
+					$(".search-progress img").attr("src", "img/progress0.png");
+					});
+					animationMap["searchPlan"] = searchPlan_a;
+				}
+			};
+
+			var smarkerReg = /^s[0-9]+$/;
+			var pmarkerReg = /^p[0-9]+$/;
+
+			var createPlanTable = function(){
+
+			}
+
+			//加载计划列表子页面-----
+			initPlanPanel = function(){$(".planPanel").load("page/plan_table.html", [], function(){
+				console.log("load planPanel");
+				//点击保存
+				$("#save-plan").on("click", function(event){
+					//saveSchedule("#scheduleList", "schedules");
+					var plan_list = $("#plan_tables .plan-table .planList");
+					plan_list.each(function(index, plan){
+						console.log(plan.id);
+						savePlans("#"+plan.id, plan.id);
+					});			
+					//initSchedulesList();
+					//initDateBoard();
+				});
+				//点击新增
+				$(".planPanel .add").on("click", function(event){
+					console.log("add new plan");
+					var newPlan = createPlan();
+					//点击清除
+					newPlan.find(".btn-del-schedule").on("click", function(event){
+						console.log("deletePlan tr");
+						var tr = $(this).parents("tr");
+						var no = tr.find('input[name="no"]').val();
+						tr.fadeOut("middle", function(){
+							tr.remove();
+							if(markers["p"+no]){
+								delete markers["p"+no].setAnimation(null);
+								return false;
+							}
+						});
+						return false;
+					});
+					$(this).parents("table").append(newPlan);
+					CoCo.dragScheduleBind(newPlan, new Aggregate(currentPlan));
+				});
+				
+				createNewPlanList = function(){
+					console.log("add new plan table");
+					var newPlanTable = $(".plan-table-template").clone(true);
+					newPlanTable.removeClass("plan-table-template");
+					newPlanTable.addClass("plan-table");
+					newPlanTable.find(".planList").attr("id", "plan_new");
+					newPlanTable.find(".planList").data("plan-name", "手术");
+					$("#plan_tables .swiper-wrapper").append(newPlanTable);
+					mySwiper.update();
+				} 
+				
+				deletePlanList = function(planid){
+					coco.deletePlanList(planid);	
+					mySwiper.removeSlide(mySwiper.realIndex);
+				}
+				
+				//点击新增计划
+				$("#newPlanList").on("click", function(event){
+					createNewPlanList();
+				});
+				
+				//点击删除计划
+				$("#deletePlanList").on("click", function(event){
+					var plan_id = $(mySwiper.slides[mySwiper.realIndex]).find(".planList").attr("id");
+					deletePlanList(plan_id == "plan_new"? "plan_new" : plan_id.substring(5));
+				});
+				// $(".plan-table:eq(0) table").attr("id", nextId);
+				// $.each(dayPlans, function(index, plans){
+				// 	console.log("create new table : "+index);
+				// 	var newPlanTable = $("#"+nextId).parents(".plan-table").clone(true);
+				// 	newPlanTable.find("table").attr("id", index);
+				// 	$("#plan_tables .swiper-wrapper").append(newPlanTable);
+				// 	initPlansList(index);
+				// 	planNo++;
+				// });
+				// if(nextId.substring(nextId.indexOf("_")+1, nextId.length) > 1){
+				// 	var templateTable = $("#"+nextId).parents(".plan-table");
+				// 	$("#"+nextId).parents(".plan-table").detach();
+				// 	$("#plan_tables .swiper-wrapper").append(templateTable);
+				// }
+				// var newPlanTable = $(".plan-table:eq(0)").clone(true);
+				// newPlanTable[0].id = "plan_"+nextId;
+				// $("#plan_tables .swiper-wrapper").append(newPlanTable);
+				mySwiper = new Swiper('.swiper-container',{
+					noSwiping : true,
+					navigation:{
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev'
+					},
+					pagination: {
+						el: '.swiper-pagination',
+						type: 'fraction',
+						renderCustom: function (currentClass, totalClass) {
+						return + currentClass +' of ' + totalClass;
+						}
+					},
+					on : {
+						slideChangeTransitionEnd : function(){
+							console.log($(this.slides[this.realIndex]).find(".planList").data("plan-name"));
+							$("#plan_tables input[name='current-plan-name']").val($(this.slides[this.realIndex]).find(".planList").data("plan-name"));
+							console.log("markers :" + Object.getOwnPropertyNames(markers).length);
+							for (var p in markers) {
+								if (markers.hasOwnProperty(p)){
+									if(pmarkerReg.test(p)){
+										map.removeOverlay(markers[p]);
+										delete markers[p];
+									}
+								}
+							}
+							//this.slides[this.realIndex]
+							//alert(this.realIndex);
+						}
+					}
+				});
+				initDateBoard();
+				//计划单名称更改
+				$("#plan_tables input[name='current-plan-name']").on("change", function(){
+					console.log("current-plan-name change");
+					$("#plan_tables .planlist-info .func").removeClass("hidden");
+				});
+				$("#plan_tables .planlist-info .func .confirm").on("click", function(){
+					console.log("current-plan-name ok");
+					if($(mySwiper.slides[mySwiper.realIndex]).find(".planList")){
+						$(mySwiper.slides[mySwiper.realIndex]).find(".planList").data("plan-name", $("#plan_tables input[name='current-plan-name']").val());
+						console.log($(mySwiper.slides[mySwiper.realIndex]).find(".planList").data("plan-name"));
+						$("#plan_tables .planlist-info .func").addClass("hidden");
+					}
+				});
+				$("#plan_tables .planlist-info .func .cancel").on("click", function(){
+					console.log("current-plan-name cancel");
+					if($(mySwiper.slides[mySwiper.realIndex]).find(".planList")){
+						$("#plan_tables input[name='current-plan-name']").val($(mySwiper.slides[mySwiper.realIndex]).find(".planList").data("plan-name"));
+						console.log($(mySwiper.slides[mySwiper.realIndex]).find(".planList").data("plan-name"));
+						$("#plan_tables .planlist-info .func").addClass("hidden");
+					}
+				});
+			});
+			}//加载计划列表子页面*****
+
+			var initDateBoard = function(){
+				$("#currentDay > a").text(currentDay.getFmtMonth() + "-" + currentDay.getFmtDate());
+				var prev2dayDate = new Date(currentDay.getTime() - 2 * 24 * 60 * 60 * 1000);
+				var prev1dayDate = new Date(currentDay.getTime() - 1 * 24 * 60 * 60 * 1000);
+				var next1dayDate = new Date(currentDay.getTime() + 1 * 24 * 60 * 60 * 1000);
+				var next2dayDate = new Date(currentDay.getTime() + 2 * 24 * 60 * 60 * 1000);
+				$("#currentDay > a").data("date", currentDay);
+				$("#currentDay").prev().prev().children().data("date", prev2dayDate);
+				$("#currentDay").prev().children().data("date", prev1dayDate);
+				$("#currentDay").next().children().data("date", next1dayDate);
+				$("#currentDay").next().next().children().data("date", next2dayDate);
+				$("#currentDay").prev().prev().children().text(prev2dayDate.getFmtMonth() + "-" + prev2dayDate.getFmtDate());
+				$("#currentDay").prev().children().text(prev1dayDate.getFmtMonth() + "-" + prev1dayDate.getFmtDate());
+				$("#currentDay").next().children().text(next1dayDate.getFmtMonth() + "-" + next1dayDate.getFmtDate());
+				$("#currentDay").next().next().children().text(next2dayDate.getFmtMonth() + "-" + next2dayDate.getFmtDate());
+				//清除其他计划的标注
+				console.log("markers :" + Object.getOwnPropertyNames(markers).length);
+				for (var p in markers) {
+					if (markers.hasOwnProperty(p)){
+						if(pmarkerReg.test(p)){
+							map.removeOverlay(markers[p]);
+							delete markers[p];
+						}
+					}
+				}
+				//map.clearOverlays();
+				/* var dayPlans = coco.getDayPlans(currentDayFmt);
+				var nextId = coco.getPlanId(dayPlans); */
+				//计划列表
+				//$(".plan-table:eq(0) table").attr("id", nextId);
+				mySwiper.removeAllSlides();
+				coco.getPlan(currentDayFmt, function(data){
+					$.each(data, function(index, plans){
+						console.log("create new table : "+plans.operatorName);
+						console.log("plans : ");
+						console.log(plans);
+						var newPlanTable = $(".plan-table-template").clone(true);
+						newPlanTable.removeClass("plan-table-template");
+						newPlanTable.addClass("plan-table");
+						newPlanTable.find(".planList").attr("id", "plan_"+plans.id);
+						newPlanTable.find(".planList").data("operatorName", plans.operatorName);
+						$("#plan_tables .swiper-wrapper").append(newPlanTable);
+						initPlansList("plan_"+plans.id, plans);
+						planNo++;
+					});
+					mySwiper.update();
+					$("#plan_tables input[name='current-plan-name']").val($(mySwiper.slides[mySwiper.realIndex]).find(".planList").data("plan-name"));
+				});
+				
+				// if(nextId.substring(nextId.indexOf("_")+1, nextId.length) > 1){
+				// 	var templateTable = $("#"+nextId).parents(".plan-table");
+				// 	$("#"+nextId).parents(".plan-table").detach();
+				// 	$("#plan_tables .swiper-wrapper").append(templateTable);
+				// }
+				$('.date').datepicker('setDate', currentDay);
+				var planNo = 0;
+				
+			};
+			$(".date-group-picker a").each(function(ele){
+				var dateButton = $(this);
+				dateButton.on("click", function(){
+					console.log("pick day : " + (dateButton.text().substring(dateButton.text().lastIndexOf("-")+1)));
+					console.debug(dateButton.data("date"));
+					currentDay = dateButton.data("date");
+					dateButton.removeClass("active");
+					currentDayFmt = fmtDate(currentDay);
+					initDateBoard();
+				});
+			});
+
+			//保存所有条目
+			var saveSchedule = function(src, target){
+				var scheduleCount = $(src+ " tr").length;
+				schedules = new Array(scheduleCount - 1);
+				for(i = 1; i < scheduleCount; i++){
+					var schedule = $("#scheduleList tr:eq("+i+")");
+					var scheduleObj = new CoCo.Schedule();
+					scheduleObj.no = "";
+					scheduleObj.title = schedule.find("input[name='title']").val();
+					scheduleObj.name = schedule.find("input[name='name']").val();
+					scheduleObj.telephone = schedule.find("input[name='telephone']").val();
+					scheduleObj.address = schedule.find("input[name='address']").val();
+					scheduleObj.distance = schedule.find("input[name='distance']").val();
+					scheduleObj.duration = schedule.find("input[name='duration']").val();
+					scheduleObj.remarks = schedule.find("input[name='remarks']").val();
+					scheduleObj.endPointLng = schedule.find("input[name='endPoint-lng']").val();
+					scheduleObj.endPointLat = schedule.find("input[name='endPoint-lat']").val();
+					var no = scheduleObj.title.substring(0, scheduleObj.title.indexOf("."));
+					scheduleObj.no = no;
+					schedules[i - 1] = scheduleObj;
+				}
+				localStorage[target] = JSON.stringify(schedules);
+				console.debug(localStorage[target]);
+			}
+
+			//保存所有条目
+			var savePlans = function(src, target){
+				var scheduleCount = $(src +" tr").length;
+				schedules = new Array(scheduleCount - 1);
+				//var planId = $(src).attr("id");
+				for(i = 1; i < scheduleCount; i++){
+					var schedule = $(src + " tr:eq("+i+")");
+					var planObj = new CoCo.Plan();
+					planObj.id = schedule.find("input[name='id']").val();
+					planObj.no = "";
+					planObj.title = schedule.find("input[name='title']").val();
+					planObj.name = schedule.find("input[name='name']").val();
+					planObj.telephone = schedule.find("input[name='telephone']").val();
+					planObj.address = schedule.find("input[name='address']").val();
+					if(planObj.address){
+						var address = {};
+						planObj.address = address;
+						address.name = schedule.find("input[name='address']").val();
+						address.id = schedule.find("input[name='address-id']").val();
+						address.distance = schedule.find("input[name='distance']").val();
+						address.duration = schedule.find("input[name='duration']").val();
+						address.lng = schedule.find("input[name='endPoint-lng']").val();
+						address.lat = schedule.find("input[name='endPoint-lat']").val();
+					}
+					planObj.remarks = schedule.find("input[name='remarks']").val();
+					var no = planObj.title.substring(0, planObj.title.indexOf("."));
+					planObj.no = no;
+					schedules[i - 1] = planObj;
+				}
+				console.debug("saveplan id :"+$(src).attr("id"));
+				var plan = {id: $(src).attr("id") == "plan_new" ? null : $(src).attr("id").substring(5), 'operatorName' :  $(src).data("plan-name"), date : currentDayFmt.replace(/-/g, ""), scheduleList : schedules, routePlan : {}};
+				/* if(!(allPlans[currentDayFmt]))
+					allPlans[currentDayFmt] = {}; 
+				allPlans[currentDayFmt][target] = plan; 
+				localStorage["plans"] = JSON.stringify(allPlans);
+				console.debug("savePlan after saveing:" + JSON.stringify(allPlans));*/
+				console.log("save plan : ");
+				console.log(plan);
+				coco.savePlan( JSON.stringify(plan), function(data){
+					if($("#plan_new"))
+						$("#plan_new").attr("id", "plan_"+data.id);
+					initPlansList("plan_" + data.id, data);
+				});
+			}
+
+			//点击新增
+			$(".schedulePanel .add").on("click", function(event){
+				var newSchedule = createSchedule();
+				console.log("________________"+newSchedule);
+				$("#scheduleList").append(newSchedule);
+				CoCo.dragScheduleBind(newSchedule, new Aggregate(schedules));
+			});
+
+			
+			//点击清除
+			$("#clear").on("click", function(event){
+				console.debug("clear localStorage.schedules");
+				delete localStorage.schedules;
+			});
+			//导出
+			$("#exportData").on("click", function(){
+				coco.export2txt("schedules");
+
+			})
+
+			var confirmChange;
+			var showImportInfo = function(backupJSON, type){
+				console.debug(backupJSON);
+				var appendToModal = type == 1 || type == 2? "schedule" : "plan";
+				$("#importModal .schedule .panel-body").append("<p class=\"importInfo\">导入数据事件:" + backupJSON.updateDate + "</p>");
+				$("#importModal .schedule .panel-body").append("<p class=\"importInfo\">导入数据数量:" + backupJSON.schedulesCount + "条</p>");			
+				var planDate = $("#importModal .date").datepicker('getDate');
+				console.debug(planDate);
+				if(type == 1 || type == 2){
+					confirmChange = function(eventconfirmChange){
+					console.debug("import schedules");
+					localStorage.schedules = JSON.stringify(backupJSON.schedules);
+					initSchedulesList();
+					};
+				}else if(type == 3 || type == 4){
+					confirmChange = function(eventconfirmChange){
+					console.debug("import plans");
+					//allPlans[fmtDate(planDate)] = {scheduleList : backupJSON.schedules};
+					//localStorage.plans = JSON.stringify(allPlans);
+					currentDay = planDate;
+					currentDayFmt = fmtDate(currentDay);
+					initDateBoard();
+					createNewPlanList();
+					backupJSON.planDate = 
+					initPlansList("plan_new", backupJSON);
+					};
+				}else{
+					return;
+				}
+				$(".saveChange").on("click", confirmChange);
+			}
+
+			var accessTxt;
+			var importTxt = function(files, type){
+				var readerCode;			
+				switch(parseInt(type)){
+					case 1:
+					case 3:
+					readerCode = "utf-8";
+					accessTxt = function(result){
+						return JSON.parse(result);
+					}
+					break;
+					case 2:
+					case 4:
+					accessTxt = coco.accessTaobao;
+					readerCode = "utf-8";
+					break;
+				}
+				//var reader = coco.getReader(files, type==1||type==3?"utf-8":"GB2312");
+				var reader = coco.getReader("utf-8");
+				var backupJSON = "";
+				reader.onload = function(){
+						try{
+							if(type == 2)
+								backupJSON = accessTxt(this.result, C_TYPE_SCHEDULE);
+							if(type == 4)
+								backupJSON = accessTxt(this.result, C_TYPE_PLAN);
+						}catch(e){
+							var warning_panel = $("#importModal .import-warning-template").clone();
+							warning_panel.addClass("import-warning");
+							warning_panel.removeClass("import-warning-template");
+							warning_panel.removeClass("hidden");
+							warning_panel.append(e);
+							$("#importModal .plan .panel-body").append(warning_panel);
+						}
+						showImportInfo(backupJSON, type);
+				}			
+			}
+			$('#importModal').on('hidden.bs.modal', function(e){
+				$("#importModal .import-warning").remove();
+				$("#importModal .modal-body .importInfo").remove();
+			})
+			//$("#importBox input[type='file']").select();
+			$("#importBox .schedules").on("change", function(){
+				$("#importModal .import-warning").remove();
+				$("#importModal .modal-body .importInfo").remove();
+				importTxt(this.files, $("#importModal .clicking").attr("data-import-type"));
+			});
+
+			$("#exportModal [data-export-type='2']").on("click", function(){
+				coco.export2taobaoTxt("schedules");
+			});
+
+			$("#exportModal [data-export-type='4']").on("click", function(){
+				var planDateFmt = fmtDate($("#exportModal .date").datepicker('getDate'));
+				var result = coco.export2taobaoTxt("plan", planDateFmt);
+				if(result)
+					alert(result);
+			});
+
+			$("#importBox").on("click", function(){
+				$("body").scrollTop(0);
+				$('#importModal').modal({backdrop : true});
+			});
+
+			$("#exportBox").on("click", function(){
+				$("body").scrollTop(0);
+				$('#exportModal').modal({backdrop : true});
+			});
+
+			$("#importModal .import-file").on("click", function(){
+				$("#importBox .schedules").click();
+				$(this).addClass("clicking");
+				$("#importModal .import-file").not(this).removeClass("clicking");
+			});
+			//bootstrap tooltip控件动态修改提示内容
+			$("[data-toggle='tooltip']").on('change', function () {
+				$(this).attr('title',$(this).val()).tooltip('fixTitle');
+			});
+
+			$(".btn-select-all").on("click", function(){
+				var checkBox = $(this).parents("table").find(".btn-select-schedule .glyphicon");
+				console.log($(this).children().attr("data-select-all"));
+				if($(this).children().attr("data-select-all") == 0){
+					$(this).children().attr("data-select-all", 1);
+					$(this).parents("table").find("input[name='isSelect']").val(1);
+					checkBox.removeClass("glyphicon-unchecked");
+					checkBox.addClass("glyphicon-check");
+					$(this).parents("table").addClass("btn-primary");
+					//planMarkers[planData.no].setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画;
+				}else{
+					$(this).children().attr("data-select-all", 0);
+					$(this).parents("table").find("input[name='isSelect']").val(0);
+					checkBox.removeClass("glyphicon-check");
+					checkBox.addClass("glyphicon-unchecked");
+					$(this).parents("table").removeClass("btn-primary");
+					//planMarkers[planData.no].setAnimation(null); //跳动的动画;
+				}
+			});
+
+			$(".schedulePanel .displayMarker").on("click", function(){
+				console.log($(this).children().attr("data-display-marker"));
+				if($(this).children().attr("data-display-marker") == 0){
+					$(this).children().attr("data-display-marker", 1);
+					$(this).find(".glyphicon").removeClass("glyphicon-star-empty");
+					$(this).find(".glyphicon").addClass("glyphicon-star");
+					for (var p in markers) {
+						if (markers.hasOwnProperty(p)){
+							if(smarkerReg.test(p)){
+								markers[p].show();
+							}
+						}
+					}
+				}else{
+					$(this).children().attr("data-display-marker", 0);
+					$(this).find(".glyphicon").removeClass("glyphicon-star");
+					$(this).find(".glyphicon").addClass("glyphicon-star-empty");
+					for (var p in markers) {
+						if (markers.hasOwnProperty(p)){
+							if(smarkerReg.test(p)){
+								markers[p].hide();
+							}
+						}
+					}
+				}
+			});
+
+			$(".planPanel .displayMarker").on("click", function(){
+				console.log($(this).children().attr("data-display-marker"));
+				if($(this).children().attr("data-display-marker") == 0){
+					$(this).children().attr("data-display-marker", 1);
+					$(this).find(".glyphicon").removeClass("glyphicon-star-empty");
+					$(this).find(".glyphicon").addClass("glyphicon-star");
+					for (var p in markers) {
+						if (markers.hasOwnProperty(p)){
+							if(pmarkerReg.test(p)){
+								markers[p].show();
+							}
+						}
+					}
+				}else{
+					$(this).children().attr("data-display-marker", 0);
+					$(this).find(".glyphicon").removeClass("glyphicon-star");
+					$(this).find(".glyphicon").addClass("glyphicon-star-empty");
+					for (var p in markers) {
+						if (markers.hasOwnProperty(p)){
+							if(pmarkerReg.test(p)){
+								markers[p].hide();
+							}
+						}
+					}
+				}
+			});
+
+			$("#dateBoard .date input").on("change", function(){
+				console.log($(this).parent().datepicker("getDate"));
+				currentDay = $(this).parent().datepicker("getDate");
+				currentDayFmt = fmtDate(currentDay);
+				initDateBoard();
+			});
+
+			$(".map-control .begin").on("click", function(){
+				mapControl.isPlanning = true;
+				var searchAggregate =currentPlan;
+
+			});
+
+			$(".map-control .finish").on("click", function(){
+				mapControl.isPlanning = false;
+				mapControl.finishPlan();
+			});
+			//默认隐藏未计划列表
+			$(".schedulePanel .displayMarker").click();
+		}
+		window.onload = loadScript;
+	
+	</script>
+	<!-- 导航 -->
+	<!-- <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+		<div class="navbar-header">
+
+		</div>
+		<ul class="nav nav-pills">
+		<li role="presentation" class="active"><a href="#">Home</a></li>
+		<li role="presentation"><a href="#">Profile</a></li>
+		<li role="presentation"><a href="#">Messages</a></li>
+		</ul>
+	  </div> 
+	</nav> -->
+	
+	
+	<div class="col-lg-6 main" style="margin-top: 60px">
+		<ul id="nav-board" class="nav nav-tabs nav-justified">
+		  <li role="presentation" role="tab" data-toggle="tab" class="active"><a href="#">未计划</a></li>
+		  <li role="presentation" role="tab" data-toggle="tab"><a href="#">计划中</a></li>
+		  <li role="presentation" role="tab" data-toggle="tab"><a href="#">已完成</a></li>
+		  <li role="presentation" role="tab" data-toggle="tab"><a href="#">查询地址</a></li>
+		</ul>
+		<div class="schedulePanel">
+			<div class="search-bar-template">
+				<div class="input-group">
+				<input class="form-control" name="search" />
+				<span class="input-group-btn" >
+					<button class="btn btn-default btn-search" type="button">搜索</button>
+				</span>
+				</div>
+				<div class="input-group pull-right">
+					<button type="button" class="btn btn-primary confirm" data-dismiss="modal">确定</button>
+					<button type="button" class="btn btn-default cancel" data-dismiss="modal">关闭</button>
+				</div>
+				<input type="hidden" name="endPoint-lng">
+				<input type="hidden" name="endPoint-lat">
+			</div>
+			<table class="table table-condensed">
+				<thead>
+					<tr class="label-default">
+						<th class="col-lg-1 text-center">
+							<button type="button" class="btn btn-default btn-xs col-lg-4 btn-select-all" data-toggle="tooltip" data-placement="right" title="全选" data-trigger="hover">
+								<span class="glyphicon glyphicon-unchecked" aria-hidden="true" data-select-all = "0"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-xs col-lg-4 col-lg-offset-3 displayMarker" data-toggle="tooltip" data-placement="right" title="显示/隐藏标记" data-trigger="hover">
+								<span class="glyphicon glyphicon-star" aria-hidden="true" data-display-marker = "1" ></span>
+							</button>
+						</th>
+						<th class="col-lg-2 text-center">
+							<button type="button" class="btn btn-default btn-xs pull-left add" data-toggle="tooltip" data-placement="right" title="新增" data-trigger="hover">
+								<span class="glyphicon glyphicon-plus" aria-hidden="true" data-select-all = "0"></span>
+							</button>
+						标题</th>
+						<th class="col-lg-1 text-center">姓名</th>
+						<th class="col-lg-2 text-center">联系方式</th>
+						<th class="col-lg-3 text-center">地址<button id="searchSchedule" class="btn btn-info btn-xs text-right">计算路程</button></th>
+						<th class="col-lg-1 text-center">距离/km</th>
+						<th class="col-lg-1 text-center">备注</th>
+						<th class="col-lg-1 text-center"></th>
+					</tr>
+				</thead>
+				<tbody id="scheduleList">
+					<tr class="scheduleTemplate">
+						<td class="col-lg-1 schedule-header" draggable="true">
+							<button type="button" class="btn btn-default btn-xs col-lg-4 btn-select-schedule"><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+							</button>
+							<div class="dropdown col-lg-8 rowNo">
+							<button type="button" class="btn dropdown-toggle btn-info btn-xs" data-toggle="dropdown">
+							<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu" style="height: 150px; overflow-y: scroll;position: absolute;"></ul>
+						</div>
+						<td class="col-lg-2"><input class="form-control input-sm" name="title" data-toggle="tooltip" data-trigger="hover" /></td>
+						<td class="col-lg-1"><input class="form-control input-sm" name="name" /></td>
+						<td class="col-lg-2"><input class="form-control input-sm" name="telephone" data-toggle="tooltip" data-trigger="hover" /></td>
+						<td class="col-lg-3">
+							<div class="input-group">
+								<input class="form-control input-sm" name="address" data-toggle="tooltip" data-trigger="hover" />
+								<span class="input-group-btn" >
+									<button class="btn btn-default btn-success btn-sm location" data-toggle="popover">定位</button>
+								</span>
+							</div>
+						</td>
+						<td class="col-lg-1"><input class="form-control input-sm text-right" name="distance" /></td>
+						<td class="col-lg-1"><input class="form-control input-sm" name="remarks" data-toggle="tooltip" data-trigger="hover" /></td>
+						<td class="col-lg-1">
+							<button type="button" class="btn btn-danger btn-xs col-lg-6 btn-del-schedule"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+							<button type="button" class="btn btn-info btn-xs col-lg-6 btn-detail"><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span></button>
+						</td>
+						<input type="hidden" name="no" />
+						<input type="hidden" name="address-id" />	
+						<input type="hidden" name="duration" />
+						<input type="hidden" name="endPoint-lng" />
+						<input type="hidden" name="endPoint-lat" />
+						<input type="hidden" name="status" value="new" />
+						<input type="hidden" name="isSelect" value="0" />
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="dateBoard" class="row">
+			<div class="col-lg-2">
+				<button class="btn btn-default">当前计划日期</button>
+			</div>			
+			<div class="col-lg-6">
+				<nav>
+					<ul class="pager date-group-picker" style="margin: 0px">
+						<li>
+							<a href="#"></a>
+						</li>
+						<li>
+							<a href="#"></a>
+						</li>
+						<li id="currentDay">
+							<a href="#"></a>
+						</li>
+						<li>
+							<a href="#"></a>
+						</li>
+						<li>
+							<a href="#"></a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="input-group col-lg-3 date" data-provide="datepicker">
+				<input type="text" class="form-control">
+				<div class="input-group-addon">
+					<span class="glyphicon glyphicon-th"></span>
+				</div>
+			</div>
+		</div>
+		<div class="planPanel">
+			
+		</div>
+		<!-- <div id="plan_table"></div> -->
+		<canvas id="dragScheduleImg" width="200" height="30"></canvas>		
+	</div>
+	<div class="map-panel col-lg-6">
+		<div class="search-bar input-group col-lg-4">			
+			<input id="search" class="form-control" name="search" />
+			<span class="input-group-btn" >
+				<button class="btn btn-default btn-search" type="button" data-placement="right" data-toggle="tooltip" data-trigger="hover" title="搜索">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
+				<button class="btn btn-default btn-clear" type="button" data-placement="right" data-toggle="tooltip" data-trigger="hover" title="清除">
+					<span class="glyphicon glyphicon-refresh"></span>
+				</button>
+				<button class="btn btn-default btn-locate" type="button" data-placement="right" data-toggle="tooltip" data-trigger="hover" title="位置">
+					<span class="glyphicon glyphicon-refresh"></span>
+				</button>
+			</span>
+		</div>
+		<div id="allmap"></div>
+		<div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+		<div id="r-result">
+			<ul class="list-group">
+				<li class="list-group-item result-template">
+					<span style="background:url(http://api.map.baidu.com/images/markers.png) -23px 0px no-repeat;width:19px;height:25px;cursor:pointer;float:left;*zoom:1;overflow:hidden;margin:2px 3px 0 5px;*margin-right:0px;display:inline;">&nbsp;</span>
+					<!-- <div></div> -->
+					<div class="reusult-detail" style="zoom: 1; overflow: hidden; padding: 0px 5px; background-color: rgb(240, 240, 240);">
+						<div style="line-height:20px;font-size:12px;"><span style="color:#00c;"></span>
+							<a target="_blank" output=html&amp;source=jsapi" style="margin-left:5px;font-size:12px;color:#3d6dcc;font-weight:normal;text-decoration:none;">详情»</a>
+						</div>
+						<div style="padding:2px 0;line-height:18px;*zoom:1;overflow:hidden;"><b style="float:left;font-weight:bold;*zoom:1;overflow:hidden;padding-right:5px;*margin-right:-3px;">地址:</b>
+							<span style="color:#666;display:block;zoom:1;overflow:hidden;"></span>
+						</div>
+					</div>
+					<input type="hidden" name="title">
+					<input type="hidden" name="address">				
+					<input type="hidden" name="endPoint-lng">
+					<input type="hidden" name="endPoint-lat">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- <div id="funcPanel" class="btn-group-vertical" role="group" aria-label="..." style="position: absolute; left: 1600px; z-index: 99">
+		<div class="btn-group" role="group" aria-label="...">
+			<button id="joinPlan" class="btn btn-default">加入计划</button>
+			<button type="button" id="add" class="btn btn-default">新增</button>
+			<button id="save" class="btn btn-default">保存</button>
+			<button id="clear" class="btn btn-default disabled">clear</button>
+			<button id="planMultDrivingRoute" type="button" class="btn btn-default disabled" data-toggle="tooltip" data-trigger="hover" title="计划列表超过8个就不要用了">计划路程</button>
+		</div>
+		<div class="btn-group">
+			<button id="importBox" type="button" class="btn btn-default">导入
+				<input class="hidden schedules" type="file" />
+				<input class="hidden plans" type="file" />
+			</button>
+			<button id="exportBox" type="button" class="btn btn-default">导出</button>
+		</div>
+	</div> -->
+	<div class="panel panel-default map-control">
+		<div class="panel-heading">
+			<button id="map-config"><span class="glyphicon glyphicon-cog"></span></button>
+		</div>
+		<div class="panel-body hidden">
+		<div class="btn-group">
+			<button class="btn btn-default btn-xs begin">开始</button>
+			<button class="btn btn-default btn-xs finish">完成</button>
+			<button class="btn btn-default btn-xs ">撤销</button>
+		</div>
+		</div>
+	</div>

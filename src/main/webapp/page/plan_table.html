@@ -1,0 +1,156 @@
+<div class="search-bar-template">
+	<div class="input-group">
+	<input class="form-control" name="search" />
+	<span class="input-group-btn" >
+		<button class="btn btn-default btn-search" type="button">搜索</button>
+	</span>
+	</div>
+	<div class="input-group pull-right">
+		<button type="button" class="btn btn-primary confirm" data-dismiss="modal">确定</button>
+		<button type="button" class="btn btn-default cancel" data-dismiss="modal">关闭</button>
+	</div>
+	<input type="hidden" name="endPoint-lng">
+	<input type="hidden" name="endPoint-lat">
+</div>
+<div class="swiper-slide swiper-no-swiping plan-table-template">
+	<table class="table table-condensed">
+		<thead>
+			<tr class="label-default">
+				<th class="col-lg-1 text-center">
+					<button type="button" class="btn btn-default btn-xs col-lg-4 btn-select-all" data-toggle="tooltip" data-placement="right" title="全选" data-trigger="hover">
+						<span class="glyphicon glyphicon-unchecked" aria-hidden="true" data-select-all = "0"></span>
+					</button>
+					<button type="button" class="btn btn-default btn-xs col-lg-4 col-lg-offset-3 displayMarker" data-toggle="tooltip" data-placement="right" title="显示/隐藏标记" data-trigger="hover">
+						<span class="glyphicon glyphicon-star" aria-hidden="true" data-display-marker = "1" ></span>
+					</button>
+				</th>
+				<th class="col-lg-2 text-center">
+					<button type="button" class="btn btn-default btn-xs pull-left add" data-toggle="tooltip" data-placement="right" title="新增" data-trigger="hover">
+						<span class="glyphicon glyphicon-plus" aria-hidden="true" data-select-all = "0"></span>
+					</button>
+				标题</th>
+				<th class="col-lg-1 text-center">姓名</th>
+				<th class="col-lg-2 text-center">联系方式</th>
+				<th class="col-lg-3 text-center">地址
+					<button id="searchPlan" class="btn btn-info btn-xs pull-right">计算路程
+						<span class="search-progress badge" data-process-index="0" ><img src="img/progress0.png" height="16px" width="16px"></span>
+					</button>
+				</th>
+				<th class="col-lg-1 text-center">距离/km</th>
+				<th class="col-lg-2 text-center"></th>
+			</tr>
+		</thead>
+		<tbody class="planList">
+			<!-- detailModal -->
+			<!-- <div class="detailModal">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<div class="input-group">
+						<span class="input-group-addon">公猫</span>
+						<span class="input-group-addon" id="basic-addon1">-</span>
+						<input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+						<span class="input-group-addon" id="basic-addon1">+</span>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="input-group">
+						<span class="input-group-addon">百多邦</span>
+						<span class="input-group-addon" id="basic-addon1">-</span>
+						<input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+						<span class="input-group-addon" id="basic-addon1">+</span>
+						</div>
+					</li>
+				</ul>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary saveChange" data-dismiss="modal">确定</button>
+					<button type="button" class="btn btn-default cancel" data-dismiss="modal">关闭</button>
+				</div>
+			</div> -->
+			<tr class="planTemplate">
+				<td class="col-lg-1 schedule-header" draggable="true">
+					<button type="button" class="btn btn-default btn-xs col-lg-4 btn-select-schedule"><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+					</button>
+				<div class="dropdown col-lg-8 rowNo">
+				<button type="button" class="btn dropdown-toggle btn-info btn-xs" data-toggle="dropdown">
+				<span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu" role="menu" style="height: 150px; overflow-y: scroll;position: absolute;"></ul>
+				</div>
+				</td>
+				<td class="col-lg-2"><input class="form-control input-sm" name="title" data-toggle="tooltip" data-trigger="hover" /></td>
+				<td class="col-lg-1"><input class="form-control input-sm" name="name" /></td>
+				<td class="col-lg-2"><input class="form-control input-sm" name="telephone" data-toggle="tooltip" data-trigger="hover" /></td>
+				<td class="col-lg-3">
+					<div class="input-group">
+						<input class="form-control input-sm" name="address" data-toggle="tooltip" data-trigger="hover" />
+						<span class="input-group-btn" >
+							<button class="btn btn-default btn-success btn-sm location" data-toggle="popover">定位</button>
+						</span>
+					</div>
+				</td>
+				<td class="col-lg-1"><input class="form-control input-sm text-right" name="distance" /></td>
+				<td class="col-lg-2">
+					<button type="button" class="btn btn-default btn-sm col-lg-3 btn-edit-remarks" data-toggle="popover">
+						<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+					</button>	
+					<button type="button" class="btn btn-default btn-sm col-lg-3 btn-res-schedule" data-toggle="tooltip" data-trigger="hover" title="回退">
+						<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-danger btn-sm col-lg-3 btn-del-schedule" data-toggle="tooltip" data-trigger="hover" title="删除">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-danger btn-sm col-lg-3 btn-detail"><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span></button>
+				</td>
+				<input type="hidden" name="id" />
+				<input type="hidden" name="address-id" />
+				<input type="hidden" name="no" />
+				<input type="hidden" name="remarks" />
+				<input type="hidden" name="distance" />
+				<input type="hidden" name="endPoint-lng" />
+				<input type="hidden" name="endPoint-lat" />
+				<input type="hidden" name="status" value="planning" />
+				<input type="hidden" name="isSelect" value="0" />
+			</tr>
+			<input type="hidden" name="planDate">
+		</tbody>
+	</table>
+</div>
+<div class="swiper-container" id="plan_tables">
+	<div class="panel panel-default">
+		<div class="panel-body">
+				
+				<ul class="nav nav-pills navbar-form navbar-left">
+					<li>
+						<div class="input-group planlist-info">
+						<span class="input-group-addon">计划单名</span>
+						<input class="form-control input-sm" type="text" name="current-plan-name" />
+						<span class="input-group-btn func hidden">
+							<button class="btn btn-default btn-sm confirm"><span class="glyphicon glyphicon-ok"></span></button>
+							<button class="btn btn-default btn-sm cancel"><span class="glyphicon glyphicon-remove"></span></button>
+						</span>
+						</div>
+					</li>
+					<li><a id="save-plan" href="#">保存</a></li>
+					
+					<li><a id="newPlanList" href="#">新建计划</a></li>
+					<li><a id="deletePlanList" href="#">删除计划</a></li>
+				</ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button id="importBox" class="btn btn-default navbar-btn">导入</button>
+          </li>
+          <li><button id="exportBox" type="button" class="btn btn-default navbar-btn">导出</button></li>
+        </ul>
+				<!-- <div class="btn-group pull-right">
+					<button id="newPlanList" class="btn btn-info btn-xs">新建计划</button>
+					<button id="deletePlanList" class="btn btn-danger btn-xs">删除计划</button>
+				</div> -->
+		</div>
+	</div>
+	<div class="swiper-wrapper">
+		
+	</div>
+	<div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+	<div class="swiper-pagination"></div>
+</div>

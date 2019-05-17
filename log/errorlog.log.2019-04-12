@@ -1,0 +1,6 @@
+2019-04-12 01:04:29 [ main ] HHH000389: Unsuccessful: alter table b_orders drop foreign key FK_9qc3cxbd6hswnp80exi4gfnpx
+2019-04-12 01:04:29 [ main ] Can't DROP 'FK_9qc3cxbd6hswnp80exi4gfnpx'; check that column/key exists
+2019-04-12 01:04:29 [ main ] HHH000389: Unsuccessful: drop table if exists b_address
+2019-04-12 01:04:29 [ main ] Cannot delete or update a parent row: a foreign key constraint fails
+2019-04-12 01:04:29 [ main ] HHH000389: Unsuccessful: create table b_address (id bigint not null auto_increment, lat float, lng float, name varchar(255) not null, primary key (id))
+2019-04-12 01:04:29 [ main ] Table 'b_address' already exists

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>bubble event</title>
+    <style type="text/css">
+        body{margin:0;}
+        #one{
+            width:500px;
+            height:300px;
+            background:rgb(255,0,0);
+        }
+        #two{
+            width:400px;
+            height:260px;
+            background:rgb(255,50,50);
+        }
+        #three{
+            width:300px;
+            height:240px;
+            background:rgb(255,100,100);
+        }
+        #four{
+            width:200px;
+            height:200px;
+            background:rgb(255,150,150);
+        }
+    </style>
+</head>
+<body>
+    <div id='one'>
+      <div id='two'>
+        <div id='three'>
+          <div id='four'>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <script>
+        var one = document.getElementById('one');
+        var two = document.getElementById('two');
+        var three = document.getElementById('three');
+        var four = document.getElementById('four');
+    
+        var useCapture = true; //false为冒泡获取【目标元素先触发】    true为捕获获取【父级元素先触发】
+        // one.addEventListener('click', function() {
+        //     console.log('one');
+        // }, useCapture);
+        // two.addEventListener('click', function() {
+        //     console.log('two');
+        // }, useCapture);
+        // three.addEventListener('click', function() {
+        //     console.log('three');
+        // }, useCapture);
+        // four.addEventListener('click', function() {
+        //     console.log('four');
+        // }, useCapture);
+
+        one.onclick = function(){
+            console.log('one');
+        };
+        two.onclick = function(){
+            console.log('two');
+        };
+        three.onclick = function(){
+            console.log('three');
+        };
+        four.onclick = function(event){           
+            event.cancelBubble = true;
+            console.log(event);
+            console.log('four');
+        };
+        /*
+        false
+        冒泡
+        点击four div
+        输出结果：four three two one        
+        
+        true
+        捕获
+        点击four div
+        输出结果： one two three four
+        */
+    </script>
+</body>
+</html>

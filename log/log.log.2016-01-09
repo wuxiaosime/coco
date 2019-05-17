@@ -1,0 +1,819 @@
+2016-01-09 18:09:28 [ main ] Root WebApplicationContext: initialization started
+2016-01-09 18:09:28 [ main ] Refreshing Root WebApplicationContext: startup date [Sat Jan 09 18:09:28 CST 2016]; root of context hierarchy
+2016-01-09 18:09:28 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:09:29 [ main ] Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shardedJedisPool' defined in class path resource [applicationContext.xml]: Cannot create inner bean 'redis.clients.jedis.JedisShardInfo#278bb07e' of type [redis.clients.jedis.JedisShardInfo] while setting constructor argument with key [0]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redis.clients.jedis.JedisShardInfo#278bb07e' defined in class path resource [applicationContext.xml]: Could not resolve matching constructor (hint: specify index/type/name arguments for simple parameters to avoid type ambiguities)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:290)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:122)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:646)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redis.clients.jedis.JedisShardInfo#278bb07e' defined in class path resource [applicationContext.xml]: Could not resolve matching constructor (hint: specify index/type/name arguments for simple parameters to avoid type ambiguities)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:239)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:276)
+	... 29 more
+2016-01-09 18:09:56 [ main ] Root WebApplicationContext: initialization started
+2016-01-09 18:09:56 [ main ] Refreshing Root WebApplicationContext: startup date [Sat Jan 09 18:09:56 CST 2016]; root of context hierarchy
+2016-01-09 18:09:57 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:09:57 [ main ] Root WebApplicationContext: initialization completed in 878 ms
+2016-01-09 18:09:57 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-01-09 18:09:57 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Sat Jan 09 18:09:57 CST 2016]; parent: Root WebApplicationContext
+2016-01-09 18:09:57 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-01-09 18:09:58 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-01-09 18:09:58 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-01-09 18:09:58 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-01-09 18:09:58 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-01-09 18:09:58 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-01-09 18:09:58 [ main ] Mapped "{[/vote/stat],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.stat(javax.servlet.http.HttpServletRequest)
+2016-01-09 18:09:59 [ main ] FrameworkServlet 'springmvc': initialization completed in 1770 ms
+2016-01-09 18:27:43 [ main ] Root WebApplicationContext: initialization started
+2016-01-09 18:27:43 [ main ] Refreshing Root WebApplicationContext: startup date [Sat Jan 09 18:27:43 CST 2016]; root of context hierarchy
+2016-01-09 18:27:43 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:27:44 [ main ] Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [char[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [byte[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [int[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [char[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuilder]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuffer]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.String]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [byte[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [int[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [char[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuilder]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuffer]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.String]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+2016-01-09 18:28:21 [ main ] Root WebApplicationContext: initialization started
+2016-01-09 18:28:21 [ main ] Refreshing Root WebApplicationContext: startup date [Sat Jan 09 18:28:21 CST 2016]; root of context hierarchy
+2016-01-09 18:28:21 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:28:21 [ main ] Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [char[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [byte[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [int[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [char[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuilder]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuffer]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.String]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [byte[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [int[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [char[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuilder]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuffer]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.String]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+2016-01-09 18:29:17 [ main ] Root WebApplicationContext: initialization started
+2016-01-09 18:29:17 [ main ] Refreshing Root WebApplicationContext: startup date [Sat Jan 09 18:29:17 CST 2016]; root of context hierarchy
+2016-01-09 18:29:17 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:29:18 [ main ] Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [char[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [byte[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [int[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [char[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuilder]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuffer]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.String]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [byte[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [int[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [char[]]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuilder]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.StringBuffer]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+Related cause:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appLocation' defined in class path resource [applicationContext.xml]: Unsatisfied dependency expressed through constructor argument with index 0 of type [java.lang.String]: Ambiguous constructor argument types - did you specify the correct bean references as constructor arguments?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:733)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:549)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:136)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:97)
+2016-01-09 18:29:54 [ main ] Root WebApplicationContext: initialization started
+2016-01-09 18:29:54 [ main ] Refreshing Root WebApplicationContext: startup date [Sat Jan 09 18:29:54 CST 2016]; root of context hierarchy
+2016-01-09 18:29:54 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:29:55 [ main ] Root WebApplicationContext: initialization completed in 842 ms
+2016-01-09 18:29:55 [ main ] FrameworkServlet 'springmvc': initialization started
+2016-01-09 18:29:55 [ main ] Refreshing WebApplicationContext for namespace 'springmvc-servlet': startup date [Sat Jan 09 18:29:55 CST 2016]; parent: Root WebApplicationContext
+2016-01-09 18:29:55 [ main ] Loading XML bean definitions from class path resource [springmvc-servlet.xml]
+2016-01-09 18:29:56 [ main ] Mapped "{[/wx],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.access.AccessController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-01-09 18:29:56 [ main ] Mapped "{[/wx],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.event.EventController.signature(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-01-09 18:29:56 [ main ] Mapped "{[/get],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.get(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-01-09 18:29:56 [ main ] Mapped "{[/create],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void group.salad.menu.MenuController.create()
+2016-01-09 18:29:56 [ main ] Mapped "{[/vote/add],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.add(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-01-09 18:29:56 [ main ] Mapped "{[/vote/stat],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String group.salad.service.VoteController.stat(javax.servlet.http.HttpServletRequest)
+2016-01-09 18:29:56 [ main ] FrameworkServlet 'springmvc': initialization completed in 1242 ms
+2016-01-09 18:30:02 [ 1582797472@qtp-1529306539-0 ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39f71651: startup date [Sat Jan 09 18:30:02 CST 2016]; root of context hierarchy
+2016-01-09 18:30:02 [ 1582797472@qtp-1529306539-0 ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:02 [ 1582797472@qtp-1529306539-0 ] Using default type string
+2016-01-09 18:30:04 [ 374178596@qtp-1529306539-2 ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@29f5a017: startup date [Sat Jan 09 18:30:04 CST 2016]; root of context hierarchy
+2016-01-09 18:30:04 [ 374178596@qtp-1529306539-2 ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:04 [ 374178596@qtp-1529306539-2 ] Using default type string
+2016-01-09 18:30:04 [ 374178596@qtp-1529306539-2 ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1000c350: startup date [Sat Jan 09 18:30:04 CST 2016]; root of context hierarchy
+2016-01-09 18:30:04 [ 374178596@qtp-1529306539-2 ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:04 [ 374178596@qtp-1529306539-2 ] Using default type string
+2016-01-09 18:30:57 [ main ] Root WebApplicationContext: initialization started
+2016-01-09 18:30:57 [ main ] Refreshing Root WebApplicationContext: startup date [Sat Jan 09 18:30:57 CST 2016]; root of context hierarchy
+2016-01-09 18:30:57 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:58 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@77307458: startup date [Sat Jan 09 18:30:58 CST 2016]; root of context hierarchy
+2016-01-09 18:30:58 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:58 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@30ed9c6c: startup date [Sat Jan 09 18:30:58 CST 2016]; root of context hierarchy
+2016-01-09 18:30:58 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:58 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2de366bb: startup date [Sat Jan 09 18:30:58 CST 2016]; root of context hierarchy
+2016-01-09 18:30:58 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:58 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@cc6460c: startup date [Sat Jan 09 18:30:58 CST 2016]; root of context hierarchy
+2016-01-09 18:30:58 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:58 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4593ff34: startup date [Sat Jan 09 18:30:58 CST 2016]; root of context hierarchy
+2016-01-09 18:30:58 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:58 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3bb9efbc: startup date [Sat Jan 09 18:30:58 CST 2016]; root of context hierarchy
+2016-01-09 18:30:58 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:58 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6548bb7d: startup date [Sat Jan 09 18:30:58 CST 2016]; root of context hierarchy
+2016-01-09 18:30:58 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:58 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4e7095ac: startup date [Sat Jan 09 18:30:58 CST 2016]; root of context hierarchy
+2016-01-09 18:30:58 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@169da7f2: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@77e80a5e: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@435ce306: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@775594f2: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@62515a47: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4642b71d: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@15723761: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@bdecc21: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3bcd426c: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@659925f4: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@415156bf: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@52b6319f: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@55f8669d: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@630d1b2f: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@540dbda9: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:30:59 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:30:59 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5177e388: startup date [Sat Jan 09 18:30:59 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7144655b: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@34e20e6b: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2dddc1b9: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4b869331: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@100c567f: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2e23c180: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@49c8f6e8: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@719d35e8: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@10fbbdb: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@285f38f6: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@47a7a101: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@84487f4: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:00 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@242a209e: startup date [Sat Jan 09 18:31:00 CST 2016]; root of context hierarchy
+2016-01-09 18:31:00 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3db972d2: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5555ffcf: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3414a8c3: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f038248: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7b6860f9: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7fdab70c: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@443effcb: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@eac3a26: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7c8c70d6: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6d5c2745: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@59bbe88a: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@354e7004: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@c29fe36: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6af5bbd0: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3cad68df: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@f9f3928: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@54755dd9: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:01 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@55651434: startup date [Sat Jan 09 18:31:01 CST 2016]; root of context hierarchy
+2016-01-09 18:31:01 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:02 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7c011174: startup date [Sat Jan 09 18:31:02 CST 2016]; root of context hierarchy
+2016-01-09 18:31:02 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:02 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@793d163b: startup date [Sat Jan 09 18:31:02 CST 2016]; root of context hierarchy
+2016-01-09 18:31:02 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:02 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3458eca5: startup date [Sat Jan 09 18:31:02 CST 2016]; root of context hierarchy
+2016-01-09 18:31:02 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:02 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5cbd94b2: startup date [Sat Jan 09 18:31:02 CST 2016]; root of context hierarchy
+2016-01-09 18:31:02 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:02 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7cac93fe: startup date [Sat Jan 09 18:31:02 CST 2016]; root of context hierarchy
+2016-01-09 18:31:02 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-01-09 18:31:02 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@65bad087: startup date [Sat Jan 09 18:31:02 CST 2016]; root of context hierarchy

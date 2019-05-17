@@ -1,0 +1,4 @@
+2019-04-20 18:25:28 [ qtp1836643189-48 ] Data truncation: Data too long for column 'telephone' at row 1
+2019-04-20 18:27:40 [ qtp1836643189-21 ] Data truncation: Data too long for column 'telephone' at row 1
+2019-04-20 18:28:39 [ qtp1836643189-45 ] Data truncation: Data too long for column 'telephone' at row 1
+2019-04-20 18:32:42 [ qtp1836643189-48 ] Data truncation: Data too long for column 'telephone' at row 1

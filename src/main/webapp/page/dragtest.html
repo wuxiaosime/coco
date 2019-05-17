@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+    <title></title>  
+    <script type="text/javascript">  
+        function init() {  
+            var source = document.getElementById("dragme");  
+            var dest = document.getElementById("text");  
+            source.addEventListener("dragstart", function (e) {  
+                var dt = e.dataTransfer;  
+                dt.effectAllowed = 'all';  
+                dt.setData("text/plain", "你好");  
+            }, false);  
+            dest.addEventListener("dragend", function (e) {  
+                e.preventDefault();  
+            }, false);  
+            dest.addEventListener("drop", function (e) {  
+                var dt = e.dataTransfer;  
+                var text = dt.getData("text/plain");  
+                dt.dropEffect = 'copy';  
+                dest.textContent += text;  
+                e.preventDefault();  
+                e.stopPropagation;  
+            }, false);  
+        }  
+        document.ondragover = function (e) {  
+            e.preventDefault();
+        };  
+        document.ondrop = function (e) {  
+            e.preventDefault();  
+        };  
+    </script>  
+</head>  
+<body onload="init()">  
+    <div id="dragme" draggable="true" style ="width:200px;border:1px solid;border-color:gray">请拖放</div>  
+    <div id="text" style="width:200px;height:200px;border:1px solid;border-color:gray"></div>  
+</body>  
+</html>  
